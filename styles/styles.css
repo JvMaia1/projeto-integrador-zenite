@@ -51,7 +51,7 @@ main::before{
 main{
   position: relative;
   isolation: isolate;
-  background-image: url(/senac-projecto-integrador-grupo-legal/imagens/pexels-photo-4823232.jpeg);
+  background-image: url(../imagens/fundo.jpeg);
 }
 
 h1, nav, nav a { 
