@@ -5,7 +5,7 @@ nav { margin-block-start: 0; }
 header, .cards, .solicitacao { border-bottom-color: grey; }
 
 header {
-    display: block;
+    display: flex;
     background-image: none;
     height: auto;
     background-color: var(--cor-principal1);
