@@ -42,6 +42,7 @@ a {
 
   --primary: #2563EB;
   --primary-dark: #1D4ED8;
+  --cor-principal5: #F8FAFC;
 
   --dark: #020617;
   --light: #E2EBF0;
@@ -192,7 +193,7 @@ a {
     color: var(--primary-dark);
     font-size: clamp(1.5rem, 4vw, 4rem);
     line-height: 1.1;
-    margin-block-end: 24px;
+    margin-block: 24px;
 }
 .hero-content h3{
     color: var(--white);
@@ -410,35 +411,41 @@ a {
    CTA FINAL
 ========================================= */
 
-.pronto-para-transformar{
-    background:
-    radial-gradient(circle at right, #7C3AED38, transparent 35%),
-    linear-gradient(
-      90deg,
-      #7c3aed 0%,
-      #2563EB 45%,
-      #0B1F3A 100%
-    );
+ .pronto-para-transformar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-image: linear-gradient(to right,#7C3AED,#2563EB,#0B1F3A);
+    padding: 2rem;
+    color: var(--cor-principal5);
 
-    color: white;
+    h2,p{
+        padding: 5px;
+        text-shadow: 0 0 10px black;
+    }
+    a, a #cta-transformar{
+        font-family: 'Inter', sans-serif;
+        display: inline-block;
+        position: relative;
+        /* z-index: 999; */
+        color: var(--cor-neutra5);
+        font-size: clamp(1rem, 1.8vw, 6rem);
+        width: fit-content;
+        text-decoration: none;
+        background-color: hsla(217, 33%, 17%, 0.7);
+        border-radius: 10px;
+        padding: 5px 20px;
+        box-shadow: 0 0 10px black;
+        text-shadow: none;
+        margin: 10px;
+        border: 1px solid #2564eb80;
+    }
+}
+header{
+    height: 100%;
+}
 
-    text-align: center;
-    
-}
-.pronto-para-transformar h2{
-    font-size: clamp(2rem,4vw,4rem);
-    margin-block-end: 10px;
-}
-.pronto-para-transformar p{
-    max-width: 700px;
-    margin-inline: auto;
-    margin-block-end: 10px;
 
-    color: rgba(255,255,255,.85);
-}
-.pronto-para-transformar a{
-    margin-block-end: 10px;
-}
 
 
 /* =========================================
@@ -470,7 +477,7 @@ a {
         grid-template-columns: repeat(3, 1fr);
     }
     .hero-sobre {
-        background-image: url(../imagens/imagens-zenite/pagina2_banner-sobre-zenith.jpg);
+        background-image: url(../conteudo/imagens/Banner-Sobre.jpg);
     
         background-repeat: no-repeat;
 
@@ -489,14 +496,7 @@ a {
     }
 
 }
-@media(min-width:1200px){
-    .pronto-para-transformar p{
-        font-size: clamp(1.5rem, 2vw, 4rem);
-    }
-    .pronto-para-transformar h2{
-        font-size: clamp(2rem, 3vw, 4rem);
-    }
-}
+
 
 @media (max-width: 768px) {
 
