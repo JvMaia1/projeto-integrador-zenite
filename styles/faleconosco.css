@@ -5,19 +5,23 @@
 
 h1 { position: static; }
 
+html{overflow-x: hidden;}
+
 header {
   display: flex;
-  height: 60vh;
   border-block-end: 2px solid; 
+  height: fit-content;
+  max-height: 60vh;
   border-image: var(--gradiente) 1;
   background-image: url(../conteudo/imagens/fundo-video.jpg);
-  background-size: cover;
+  background-size:cover;
   background-position: center;
 }
 
 #titulo-nav {opacity: 1;}
 
 .cta-header-fale-conosco{
+  margin: 0;
   text-shadow: 0 0 20px black;
   padding: 5rem;
   color: var(--cor-principal5);
@@ -44,24 +48,28 @@ h1{
 }
 
 .contatos{
-  height: 40vh;
+  height: fit-content;
   padding: 1rem;
+  background-color: var(--cor-principal1);
+  
   a{ 
     text-decoration: none;
     color: var(--cor-principal2);
   }
+  
   h2{ 
     text-align: center;
     padding-block-end: 1rem;
   }
-  background-color: var(--cor-principal1);
+  
   .card{
     display: flex;
     flex-direction: column;
     padding: 5px;
   }
-
+  
   #cta-formulario{
+    margin-inline: 1rem;
     padding-block: 1rem;
     color: white;
     text-align: center;
@@ -71,6 +79,7 @@ h1{
 .solicitacao {
   height: 100vh;
   display: flex;
+  max-width: 100vw;
   background-color: var(--cor-principal5);
   padding: 1rem;
   h2{
