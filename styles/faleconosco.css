@@ -23,30 +23,44 @@ header {
 .cta-header-fale-conosco{
   margin: 0;
   text-shadow: 0 0 20px black;
-  padding: 5rem;
+  padding-block-start: 4rem;
   color: var(--cor-principal5);
 }
 
 h1{ 
   text-align: center;
   font-family: var(--fonte-titulos);
-  font-size: clamp(3rem, 7.5vw, 12rem);
+  font-size: clamp(3rem, 6.5vw, 12rem);
 }
 
-.contatos .cards{
+.contatos{
   display: flex;
-  width: 90%;
   margin-inline: auto;
-  flex-wrap: wrap;
-  justify-content: center;
+  background-color: var(--cor-principal5);
   gap: 0.5rem;
-  .card{
-    flex: 1 1 30%;
-    background-color: var(--cor-neutra2);
-    text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  .contato{
+    background-color: aqua;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+  
+  .endereco{
+    background-color: #7C3AED;
+    padding: 1rem;
+    border-radius: 5px;
   }
 }
 
+/* 
+.gmaps{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+/* 
 .contatos{
   height: fit-content;
   padding: 1rem;
@@ -74,7 +88,7 @@ h1{
     color: white;
     text-align: center;
   }
-}
+} */
 
 .solicitacao {
   height: 100vh;
