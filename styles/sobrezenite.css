@@ -173,6 +173,7 @@ a {
     /* gap: 64px; */
     text-align: center;
     gap: 2rem;
+    padding-block-start: 5vh;
     
 }
 
@@ -197,7 +198,7 @@ a {
 }
 .hero-content h3{
     color: var(--white);
-    font-size: clamp(2.5rem,5vw, 4rem);
+    font-size: clamp(1.5rem,5vw, 4rem);
 }
 
 .hero-content p{
@@ -447,7 +448,6 @@ header{
 
 
 
-
 /* =========================================
    RESPONSIVIDADE
 ========================================= */
@@ -541,7 +541,6 @@ header{
         width: 100px;
         height: 100px;
     }
-
 }
 
 
