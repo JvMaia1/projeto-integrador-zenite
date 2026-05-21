@@ -162,6 +162,8 @@ a {
 .hero-sobre{
     background: var(--dark);
     /* padding: 120px 0; */
+    background-image: url("../conteudo/imagens/Banner-Sobre.jpg");
+    background-size: cover;
    
 }
 
@@ -174,7 +176,6 @@ a {
     text-align: center;
     gap: 2rem;
     padding-block-start: 5vh;
-    
 }
 
 .tag{
@@ -259,8 +260,8 @@ a {
 }
 
 .objetivo-card img{
-    width: 150px;
-    height: 120px;
+    width: 350px;
+    height: 250px;
 
     object-fit: cover;
 
@@ -521,6 +522,10 @@ header{
     .tecnologia-grid {
         grid-template-columns: 1fr;
     }
+    .objetivo-card img{
+        width: 310px;
+        height: 250px;
+    }
 
 }
 @media (max-width: 480px) {
@@ -538,8 +543,8 @@ header{
     }
 
     .objetivo-card img {
-        width: 100px;
-        height: 100px;
+        width: 250px;
+        height: 200px;
     }
 }
 
