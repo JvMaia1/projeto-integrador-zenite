@@ -526,7 +526,12 @@ header{
         width: 310px;
         height: 250px;
     }
-
+}
+@media(min-width:1000px){
+    .objetivo-card img{
+        width: 350px;
+        height: 280px;
+    }
 }
 @media (max-width: 480px) {
 
