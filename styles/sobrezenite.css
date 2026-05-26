@@ -409,6 +409,15 @@ a {
 .valor-lista p{
     color: var(--text-light);
 }
+.links-menu a[aria-current="page"] {
+  color: var(--cor-principal3);
+  font-weight: 600;
+}
+
+.links-menu a[aria-current="page"]::after {
+  opacity: 1; /* mantém a barrinha do gradiente sempre visível */
+  animation: none;
+}
 
 /* =========================================
    CTA FINAL
@@ -447,6 +456,7 @@ a {
 header{
     height: 100%;
 }
+#titulo-nav {opacity: 1;}
 
 
 
