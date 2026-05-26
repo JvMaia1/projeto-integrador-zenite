@@ -78,6 +78,7 @@ a {
 }
 .section-header h2{
     font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--primary-dark);
 }
 
 .section-title{
@@ -260,8 +261,8 @@ a {
 }
 
 .objetivo-card img{
-    width: 350px;
-    height: 250px;
+    width: 250px;
+    height: 200px;
 
     object-fit: cover;
 
@@ -527,12 +528,7 @@ header{
         height: 250px;
     }
 }
-@media(min-width:1000px){
-    .objetivo-card img{
-        width: 350px;
-        height: 280px;
-    }
-}
+
 @media (max-width: 480px) {
 
     .section-title {
