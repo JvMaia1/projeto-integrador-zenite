@@ -162,12 +162,17 @@ nav {
 #titulo-nav{
   font-size: clamp(1.5rem, 3vw, 8rem);
   font-family: var(--fonte-titulos);
+  /* user-select: none; */
+  cursor: default ;
   opacity: 0;
   transition: opacity 0.5s ease;
   text-shadow: black 0px 0px 20px;
 }
 
-#titulo-nav.visivel{opacity: 1;}
+#titulo-nav.visivel{
+  opacity: 1;
+  cursor: pointer ;
+}
 
 .links-menu{
   display: flex;
@@ -401,7 +406,11 @@ footer {
   gap: 0.5rem;
 }
 
-.footer-contato{text-align: start;}
+.footer-contato{
+  text-align: start;
+  padding: 10px;
+  p{padding: 5px;}
+}
 
 .logo{
   display: flex;
