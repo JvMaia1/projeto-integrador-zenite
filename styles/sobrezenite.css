@@ -1,0 +1,580 @@
+/* =========================================
+   RESET
+========================================= */
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* =========================================
+   VARIÁVEIS
+========================================= */
+
+:root {
+
+  --primary: #2563EB;
+  --primary-dark: #1D4ED8;
+  --cor-principal5: #F8FAFC;
+
+  --dark: #020617;
+  --light: #E2EBF0;
+
+  --white: #FFFFFF;
+  --text: #111827;
+  --text-light: #6B7280;
+
+  --border: rgba(255,255,255,.08);
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+
+  --shadow-sm: 0 4px 12px rgba(0,0,0,.08);
+  --shadow-md: 0 12px 30px rgba(0,0,0,.12);
+
+  --transition: .3s ease;
+}
+
+/* =========================================
+   UTILITIES
+========================================= */
+
+.container {
+  width: min(1200px, 92%);
+  margin-inline: auto;
+}
+
+.section-header {
+  text-align: center;
+  /* margin-bottom: 64px; */
+  margin-block-end:20px;
+  
+}
+.section-header h2{
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--primary-dark);
+}
+
+.section-title{
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--primary);
+    margin-block-end: 16px;
+    font-weight: 600;
+}
+.section-title b{
+    color: var(--text);
+}
+
+.section-description{
+    max-width: 700px;
+    margin-inline: auto;
+}
+
+.highlight{
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.highlight-danger{
+    color: #dc2626;
+    font-weight: 600;
+}
+
+/* =========================================
+   BOTÕES
+========================================= */
+
+.btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 28px;
+
+    border-radius: var(--radius-sm);
+
+    transition: var(--transition);
+
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+.btn-primary{
+    background: var(--primary);
+    color: var(--white);
+}
+
+.btn-primary:hover{
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.btn-secondary{
+    border: 1px solid rgba(255, 255, 255, .15);
+    color: var(--white);
+}
+
+.btn-secondary:hover{
+    background: rgba(255,255,255,.08);
+}
+
+.btn-dark{
+    background: #1e293b;
+    color: white;
+    border: 2px solid var(--primary-dark);
+}
+
+.btn-dark:hover{
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero-sobre{
+    background: var(--dark);
+    /* padding: 120px 0; */
+    background-image: url("../conteudo/imagens/Banner-Sobre.jpg");
+    background-size: cover;
+   
+}
+
+.hero-grid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 64px; */
+    text-align: center;
+    gap: 2rem;
+    padding-block-start: 8vh;
+}
+
+.tag{
+    display: inline-block;
+
+    padding: 8px 16px;
+
+    border-radius: 999px;
+
+    background: rgba(37,99,235,.15);
+    color: #60a5fa;
+
+    margin-block-end: 24px;
+}
+
+.hero-content h2{
+    color: var(--primary-dark);
+    font-size: clamp(1.5rem, 4vw, 4rem);
+    line-height: 1.1;
+    margin-block: 24px;
+}
+.hero-content h3{
+    color: var(--white);
+    font-size: clamp(1.5rem,5vw, 4rem);
+}
+
+.hero-content p{
+    color: rgba(255,255,255,.75);
+    font-size: 1.1rem;
+    margin-block-end: 32px;
+}
+
+.hero-actions{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.hero-image img{
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-block-end: 10px;
+}
+
+
+/* =========================================
+   OBJETIVOS
+========================================= */
+
+.nossos-objetivos{
+    background: var(--light);
+    padding: 20px 0;
+}
+
+.objetivos-grid{
+    display: grid;
+    gap: 24px;
+}
+
+.objetivo-card{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    background: white;
+
+    padding: 24px;
+
+    border-radius: var(--radius-md);
+
+    transition: var(--transition);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.objetivo-card:hover{
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.objetivo-card img{
+    width: 250px;
+    height: 200px;
+
+    object-fit: cover;
+
+    border-radius: var(--radius-sm);
+
+    flex-shrink: 0;
+}
+
+.objetivo-content h3{
+    margin-block-end: 12px;
+    color: var(--text);
+}
+
+.objetivo-content p{
+    color: var(--text-light);
+}
+
+/* =========================================
+   IMPACTO
+========================================= */
+
+.impacto-comprovado{
+    background: #f8fafc;
+    padding: 20px 0;
+}
+
+.impact-grid{
+    display: grid;
+    gap: 24px;
+}
+
+.impact-card{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    background: white;
+
+    padding: 32px;
+
+    border-radius: var(--radius-md);
+
+    box-shadow: var(--shadow-sm);
+
+    transition: var(--transition);
+}
+
+.impact-card:hover{
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.impact-card h3{
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    color: var(--primary);
+    min-width: 120px;
+}
+
+.impact-content h4{
+    margin-block-end: 8px;
+}
+.impact-content p{
+    color: var(--text-light);
+}
+.danger h3{
+    color: #dc2626;
+}
+
+/* =========================================
+   TECNOLOGIA
+========================================= */
+
+.tecnologia-inovadora{
+    background: var(--dark);
+    color: white;
+    padding: 20px 0;
+}
+
+.tecnologia-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 24px;
+}
+
+.tech-card{
+    background: rgba(255,255,255,.03);
+
+    border: 1px solid rgba(255, 255, 255,.06);
+
+    border-radius: var(--radius-md);
+
+    padding: 32px;
+
+    text-align: center;
+
+    transition: var(--transition);
+}
+
+.tech-card:hover{
+    transform: translateY(-4px);
+    background: rgba(255,255,255,.05);
+}
+.tech-card img{
+    width: 80px;
+    height: 80px;
+
+    margin-inline: auto;
+    margin-block-end: 24px;
+}
+
+.tech-card h3{
+    margin-block-end: 12px;
+}
+
+.tech-card p{
+    color: rgba(255,255,255,.75);
+}
+
+/* =========================================
+   VALOR ESTRATÉGICO
+========================================= */
+
+.valor-estrategico{
+    background: var(--light);
+    padding: 20px 0;
+}
+.valor-lista{
+    display: flex;
+    flex-direction: column;
+}
+
+.valor-lista article{
+    padding: 32px 0;
+    border-block-end: 1px solid rgba(0,0,0,.08);
+}
+.valor-lista article:last-child{
+    border-block-end: none;
+}
+
+.valor-lista h3{
+    margin-block-end: 12px;
+}
+
+.valor-lista p{
+    color: var(--text-light);
+}
+.links-menu a[aria-current="page"] {
+  color: var(--cor-principal3);
+  font-weight: 600;
+}
+
+.links-menu a[aria-current="page"]::after {
+  opacity: 1; /* mantém a barrinha do gradiente sempre visível */
+  animation: none;
+}
+
+/* =========================================
+   CTA FINAL
+========================================= */
+
+ .pronto-para-transformar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-image: linear-gradient(to right,#7C3AED,#2563EB,#0B1F3A);
+    padding: 2rem;
+    color: var(--cor-principal5);
+
+    h2,p{
+        padding: 5px;
+        text-shadow: 0 0 10px black;
+    }
+    a, a #cta-transformar{
+        font-family: 'Inter', sans-serif;
+        display: inline-block;
+        position: relative;
+        /* z-index: 999; */
+        color: var(--cor-neutra5);
+        font-size: clamp(1rem, 1.8vw, 6rem);
+        width: fit-content;
+        text-decoration: none;
+        background-color: hsla(217, 33%, 17%, 0.7);
+        border-radius: 10px;
+        padding: 5px 20px;
+        box-shadow: 0 0 10px black;
+        text-shadow: none;
+        margin: 10px;
+        border: 1px solid #2564eb80;
+    }
+}
+header{
+    height: 100%;
+}
+#titulo-nav {opacity: 1;}
+
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (min-width: 992px){
+    .hero-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: flex-start;
+    }
+
+    .hero-content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero-image{
+        order: 2;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .tecnologia-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .hero-sobre {
+        background-image: url(../conteudo/imagens/Banner-Sobre.jpg);
+    
+        background-repeat: no-repeat;
+
+        /* background-position: right bottom; */
+
+        background-size: cover;
+    }
+    .hero-content{
+        width: 100%;
+    }
+    .hero-content h2{
+        font-size: clamp(1.5rem, 3vw, 4rem)
+    }
+    .hero-content h3{
+        font-size: clamp(2.5rem, 4vw, 4rem)
+    }
+    .objetivos-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .impact-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .objetivo-card,
+    .impact-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .impact-card h3 {
+        min-width: auto;
+    }
+
+    .tecnologia-grid {
+        grid-template-columns: 1fr;
+    }
+    .objetivo-card img{
+        width: 310px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .objetivo-card img {
+        width: 250px;
+        height: 200px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

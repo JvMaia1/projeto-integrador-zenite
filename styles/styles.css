@@ -392,8 +392,9 @@ footer {
   align-items: center;
   height: fit-content;
   background-color: var(--cor-principal1);
-  a {
+  a{
     color: white;
+    text-decoration:underline;
     &:hover, &:focus-visible{
       color: var(--cor-principal3)
     }
@@ -434,3 +435,4 @@ footer {
   from{opacity: 1;}
   to{opacity:0.7;}
 }
+
