@@ -74,7 +74,9 @@ a {
 
 .section-header {
   text-align: center;
-  margin-bottom: 64px;
+  /* margin-bottom: 64px; */
+  margin-block-end:20px;
+  
 }
 .section-header h2{
     font-size: clamp(2rem, 4vw, 3rem);
@@ -176,7 +178,7 @@ a {
     /* gap: 64px; */
     text-align: center;
     gap: 2rem;
-    padding-block-start: 5vh;
+    padding-block-start: 8vh;
 }
 
 .tag{
@@ -231,7 +233,7 @@ a {
 
 .nossos-objetivos{
     background: var(--light);
-    padding: 120px 0;
+    padding: 20px 0;
 }
 
 .objetivos-grid{
@@ -286,7 +288,7 @@ a {
 
 .impacto-comprovado{
     background: #f8fafc;
-    padding: 120px 0;
+    padding: 20px 0;
 }
 
 .impact-grid{
@@ -338,7 +340,7 @@ a {
 .tecnologia-inovadora{
     background: var(--dark);
     color: white;
-    padding: 120px 0;
+    padding: 20px 0;
 }
 
 .tecnologia-grid{
@@ -387,7 +389,7 @@ a {
 
 .valor-estrategico{
     background: var(--light);
-    padding: 120px 0;
+    padding: 20px 0;
 }
 .valor-lista{
     display: flex;
@@ -505,6 +507,12 @@ header{
     }
     .hero-content h3{
         font-size: clamp(2.5rem, 4vw, 4rem)
+    }
+    .objetivos-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .impact-grid{
+        grid-template-columns: repeat(2, 1fr);
     }
 
 }
