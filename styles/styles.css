@@ -177,7 +177,8 @@ nav {
 .links-menu{
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap:20%;
   background-color: #070d1b9c;
   box-shadow:  0 0 20px black;
   width: 100vw;
@@ -386,7 +387,7 @@ footer {
   font-size: clamp(0.8rem, 0.8vw, 3rem);
   text-align: center;
   display: flex;
-  gap: 1rem;
+  /* gap: 1rem; */
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
@@ -407,6 +408,7 @@ footer {
 }
 
 .footer-contato{
+  display: flex;
   text-align: start;
   padding: 10px;
   p{padding: 5px;}
@@ -417,7 +419,7 @@ footer {
   align-items: center;
   .logo-original {
     width: clamp(50px, 3.5vw, 150px);
-    margin: 1rem ;
+    margin: 0.3rem ;
   }
 }
 
