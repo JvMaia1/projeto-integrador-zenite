@@ -416,10 +416,12 @@ footer {
 
 .logo{
   display: flex;
+  font-family: var(--fonte-titulos);
   align-items: center;
   .logo-original {
     width: clamp(50px, 3.5vw, 150px);
     margin: 0.3rem ;
+    padding: 10px;
   }
 }
 

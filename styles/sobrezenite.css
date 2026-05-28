@@ -229,9 +229,7 @@ OBJETIVOS
 }
 .nossos-objetivos .section-header{
     padding-block: 15px;
-    h2,p{
-        padding: 5px;
-    }
+    h2,p{ padding: 5px; }
 }
 .objetivo-card{
     display: flex;
@@ -371,7 +369,7 @@ OBJETIVOS
 }
 
 /* =========================================
-   VALOR ESTRATÉGICO
+VALOR ESTRATÉGICO
 ========================================= */
 
 .valor-estrategico{
@@ -382,6 +380,21 @@ OBJETIVOS
 .valor-lista{
     display: flex;
     flex-direction: column;
+}
+.valor-lista ul {
+    list-style: disc; /* Re-enables standard bullets */
+    margin-inline-start: 2rem;
+    cursor: default;
+}
+
+.valor-lista{
+    summary{
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.05);
+            transform: translateX(10.5px);
+        }
+    }
 }
 
 .valor-lista div{
@@ -396,12 +409,9 @@ OBJETIVOS
     margin-block-end: 12px;
 }
 
-.valor-lista p{
-    color: var(--text-light);
-}
 .links-menu a[aria-current="page"] {
-  color: var(--cor-principal3);
-  font-weight: 600;
+    color: var(--cor-principal3);
+    font-weight: 600;
 }
 
 .links-menu a[aria-current="page"]::after {
