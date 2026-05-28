@@ -11,17 +11,12 @@ console.log(botaoRolagem);
 const tituloResponsivo = new IntersectionObserver (([entry]) => {
     if (entry.isIntersecting){
         tituloNav.classList.remove('visivel');
-    } else tituloNav.classList.add('visivel');
-    {
-        threshold: 0;
-    }
+    } else {tituloNav.classList.add('visivel');}
+    threshold: 0;
 });
 
-// const rolagemDinamica = new IntersectionObserver(([entry]) => {
-//     if (entry.isIntersecting){    
-//         botaoRolagem.href = 
-//     }
-// }
-// );
 
-tituloResponsivo.observe(titulo)
+
+tituloResponsivo.observe(titulo);
+
+
