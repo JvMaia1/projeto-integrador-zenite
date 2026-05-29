@@ -51,8 +51,9 @@ main::before{
 main{
   position: relative;
   isolation: isolate;
-  background-image: url(../conteudo/imagens/fundo.jpeg);
+  /* background-image: url(../conteudo/imagens/fundo.jpeg); */
   background-size: cover;
+  background-color: var(--cor-neutra1);
 }
 
 h1, nav, nav a { 
@@ -61,7 +62,7 @@ h1, nav, nav a {
   text-decoration: none;
 }
 
-header {
+#topo-pagina {
   display: flex;
   justify-content: center;
   position: relative;
@@ -79,19 +80,19 @@ header {
     animation-duration: 12s;
     animation-fill-mode: forwards;
   }
+  h1 {
+    position: absolute;
+    top: 20vh;
+    
+    font-size: clamp(4rem, 10vw, 16rem);
+    
+    /* espaço para a linha */
+    padding-bottom: 1rem;
+    
+    font-family: var(--fonte-titulos);
+  }
 }
 
-h1 {
-  position: absolute;
-  top: 20vh;
-  
-  font-size: clamp(4rem, 10vw, 16rem);
-  
-  /* espaço para a linha */
-  padding-bottom: 1rem;
-  
-  font-family: var(--fonte-titulos);
-}
 
 /* linha com gradiente abaixo do titulo */
 .linha-gradiente::after {
@@ -120,7 +121,7 @@ h1 {
   width: 100%;
 }
 
-nav {
+#menu {
   /* Flex */
   position: fixed;
   top: 0;
@@ -282,6 +283,7 @@ nav {
   p{
     font-size: clamp(0.8rem, 1.5vw, 4rem);
     margin: 0 auto;
+    margin-block-end: 15px;
   }
   
   .cabecalho {
@@ -306,6 +308,7 @@ nav {
   border-radius: 10px;  
   user-select: none;
   transition: ease-in-out 0.1s;
+  align-items: center;
   &:hover, &:focus-visible{
     transform: scale(1.008);
   }
@@ -327,12 +330,13 @@ nav {
 
 .problemas-que-resolvemos{
   color: var(--cor-principal5);
-  height: 50vh;
+  /* height: 50vh; */
   min-height: fit-content;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  flex-direction: column;
   
 }
 
@@ -344,15 +348,33 @@ nav {
   align-content: center;
 }
 
-.problemas-que-resolvemos, .compromisso {
+.problemas-que-resolvemos .cards{
+  display: flex;
+  width: 90vw;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.problemas-que-resolvemos .card{ 
+  border-inline-end: solid 5px var(--cor-principal2);
+  flex-direction: column;
+  /* flex-basis: 40%; */
+}
+
+
+.compromisso {
   .cards{
     display: flex;
     width: 90vw;
+    flex-direction: column;
     flex-wrap: wrap;
     padding: 2rem;
     gap: 1rem;
     justify-content: space-around;
   }
+  
   
   .card{
     flex: 1 1 20%;
@@ -363,8 +385,60 @@ nav {
     box-shadow: 0 0 5px black;
   }
 }
-.compromisso .card {border-inline-end: solid 10px var(--cor-principal4);}
-.problemas-que-resolvemos .card{ border-inline-end: solid 10px var(--cor-principal2);}
+/*----------------IMG FUNDO CARD COMPROMISSO---------------------*/
+.compromisso .card:first-child {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+}
+.compromisso .card:first-child::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url(../conteudo/imagens/pessoas-segurando-plantas.jpg);
+    background-size: cover;
+
+    opacity: 0.2; /* controla transparência da imagem */
+}
+.compromisso .card:nth-child(2){
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+}
+.compromisso .card:nth-child(2)::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url(../conteudo/imagens/pessoas-planejando-com-documentos.jpg);
+    background-size: cover;
+
+    opacity: 0.2; /* controla transparência da imagem */
+}
+.compromisso .card:last-child{
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+}
+.compromisso .card:last-child::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url(../conteudo/imagens/aperto-de-mao-empresarial.jpg);
+    background-size: cover;
+    background-position: center top;
+    /* background-repeat: no-repeat; */
+
+    opacity: 0.2; /* controla transparência da imagem */
+}
 
 .pronto-para-transformar{
   display: flex;
@@ -437,5 +511,16 @@ footer {
 @keyframes esmaecer{
   from{opacity: 1;}
   to{opacity:0.7;}
+}
+
+@media(min-width:768px){
+  .problemas-que-resolvemos{
+    .cards{
+      flex-flow: row;
+    }
+  }
+  .compromisso .cards{
+    flex-flow: row;
+  }
 }
 
