@@ -50,14 +50,7 @@ body{
 }
 /*-------------------HEADER--------------------------------*/
 
-/* header{
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  width: 100vw;
-  background-image: url(../conteudo/imagens/pagina2_imagem1.jpg);
-}
+
 
 /*-----------------NAV-----------------*/
 #menu{
@@ -74,80 +67,6 @@ body{
   
   
 }
-/* #titulo-nav{
-  font-size: clamp(1.5rem, 3vw, 8rem);
-  font-family: var(--fonte-titulos);
-  cursor: default ;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  text-shadow: black 0px 0px 20px;
-}
-
-#titulo-nav.visivel{
-  opacity: 1;
-  cursor: pointer ;
-}
-
-.links-menu{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: #070d1b9c;
-  box-shadow:  0 0 20px black;
-  width: 100vw;
-  min-height: fit-content;
-  height: 3vw;
-
-  a{
-    font-size: clamp(1rem, 1.2vw, 60px);
-    position: relative;
-    transition: 0.3s ease-in-out;
-    
-    &:hover, &:focus-visible{
-      color: var(--cor-principal3);
-      text-shadow: 0 0 10px #00000049;
-      &::after{
-        animation-name: transicao_barra_links;
-        animation-duration: 0.3s;
-        opacity: 1;
-      }
-    }
-  }
-  
-  .linha-gradiente::after{
-    position: absolute;
-    height: 3px;
-    width: 120%;
-    left: -10%;
-    top: 90%;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-}
-.linha-gradiente::after {
-  content: '';
-  
-  position: absolute;
-  top: 20vh;
-  
-  /* faz a linha começar antes do texto */
-  /* left: -15vw; */
-  
-  /* aumenta além do tamanho do h1 */
-  /* width: calc(100% + 30vw); */
-  
-  /* height: 3px; */
-  
-  /* background: var(--gradiente); */
-/* }  */
-/* .cabecalho .linha-gradiente::after {
-  position: absolute;
-  top: 90%;
-  left: 0;
-  width: 100%;
-}  */
-
-
 
 
 
@@ -169,8 +88,8 @@ body{
 /* ─── CONTATOS ─── */
 .contatos {
   height: fit-content;
-  padding: 2rem 1rem;
-  background-color: var(--cor-principal1);
+  /* padding: 2rem 1rem; */
+  background-color: var(--cor-principal5);
 }
 
 .contatos h2 {
@@ -180,10 +99,15 @@ body{
   padding-block-end: 1.5rem;
 }
 
-.contatos a {
+.contatos .card a {
   text-decoration: none;
   color: var(--cor-principal2);
   transition: color var(--transition);
+  font-size: clamp(0.75rem, 1.5vw, 5rem);
+  /* display: flex; */
+}
+.contato p{
+  font-size: clamp(0.75rem, 1.5vw, 5rem)!important;
 }
 
 .contatos a:hover,
@@ -204,16 +128,18 @@ body{
 .contatos .card {
   /* justify-content: center; */
   flex: 1 1 240px;
-  background-color: var(--cor-neutra2);
+  /* background-color: var(--cor-principal5); */
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1.5rem 1rem;
   border-radius: var(--radius-md);
-  color: var(--cor-neutra4);
+  color: var(--cor-neutra1);
   gap: 0.5rem;
   transition: transform var(--transition), box-shadow var(--transition);
+  margin-block-end: 15px;
+  text-shadow: none;
 }
 
 
@@ -237,13 +163,15 @@ body{
 
 /* ─── FORMULÁRIO ─── */
 .solicitacao {
-  min-height: 60vh;
+  /* min-height: 60vh; */
   height: fit-content;
   display: flex;
   justify-content: center;
   background-color: var(--cor-principal5);
-  padding: 2rem 1rem 3rem;
+  padding: 20px; 
+  
 }
+
 
 .solicitacao section {
   width: min(600px, 100%);
@@ -256,7 +184,10 @@ body{
   text-align: center;
   font-size: clamp(1.4rem, 4vw, 2.2rem);
 }
-
+.contato{
+ display: flex; 
+ /* margin-block-start: 20px; */
+}
 form {
   display: flex;
   flex-direction: column;
@@ -264,7 +195,7 @@ form {
 }
 
 label {
-  font-size: 0.9rem;
+  font-size:clamp(0.9rem,1.1vw,5rem);
   font-weight: 600;
   color: var(--cor-principal4);
   margin-block-start: 0.6rem;
@@ -354,6 +285,11 @@ form > p:last-child {
   max-width: 800px;
   margin-inline: auto;
 }
+#form-titulo{
+  font-family: "Poppins", sans-serif,system-ui;
+  color: var(--primary);
+  font-weight: 600;
+}
 
 .faq .card {
   background-color: var(--cor-neutra1);
@@ -365,10 +301,6 @@ form > p:last-child {
   flex-direction: column;
 }
 
-.faq .card:hover,
-.faq .card.faq-aberto {
-  background-color: var(--cor-neutra2);
-}
 
 .faq .card h3.faq-toggle {
   font-size: 1rem;
@@ -410,6 +342,7 @@ iframe {
     flex-direction: column;
     width: 100%;
     display: grid;
+    gap: 20px;
   }
 
   .cta-header-fale-conosco {
@@ -421,11 +354,31 @@ iframe {
 }
 
 @media(min-width:768px){ 
- .cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.5rem;
+ .contatos .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    width: 50%;
+    /* margin-inline: auto; */
+    padding: 12px;
 }
+  /*Aqui o faq quebra em 2 no pc mais continua em coluna no mobile*/
+  .faq .cards{
+    flex-direction: row;       /* ← muda de column para row */
+    flex-wrap: wrap;
+    max-width: 100%;
+    justify-content: center;
+  }
+  .faq .card{
+    flex: 1 1 calc(50% - 0.375rem); /* ← cada card ocupa ~metade */
+  }
+  .contatos{
+    display: flex;
+    justify-content: center;
+  }
+  .contatos .solicitacao{
+    max-width: 50%;
+  }
 
   /* Coluna esquerda — empilha email e telefone */
   .cards > .contato {
@@ -433,18 +386,35 @@ iframe {
     flex-direction: column;
     gap: 0.5rem;
     padding: 0;
-    /* justify-content: center; */
-    /* align-items: center; */
+    grid-column: 1 / -1;   /* ← essa é a linha chave */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-height: 75px;
+    align-self: flex-end;
+   
   }
   .contato .card{
     justify-content: center;
+    border: solid 2px rgba(0, 0, 0, 0.08);
+    padding:12px ;
   }
   
 
   /* Mapa ocupa a coluna da direita inteira */
   .card.endereco {
-    grid-column: 2;
-    grid-row: 1;
+    grid-column: 1 / -1;
+    border: solid 2px rgba(0, 0, 0, 0.08);
+    max-width: 100%;
+    p{
+      margin-block-end: 12px;
+    }
   }
+}
+@media(min-width:992px){
+  .cards > .contato{
+    max-height: 50px;
+    align-self: center;
+  }
+ 
 }
 
