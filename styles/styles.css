@@ -27,6 +27,7 @@
   margin: 0;
   padding: 0;
 }
+*{margin-inline: auto;}
 
 html {
   overflow-x: hidden; /* Evitando que a pagina crie uma barra lateral */
@@ -116,7 +117,7 @@ h1, nav, nav a {
 
 .cabecalho .linha-gradiente::after {
   position: absolute;
-  top: 90%;
+  top: 100%;
   left: 0;
   width: 100%;
 }
@@ -483,22 +484,22 @@ p{
     /* background-repeat: no-repeat; */
 
     opacity: 0.2; /* controla transparência da imagem */
-}
-
-.pronto-para-transformar{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-  gap: 5px;
-  background-image: linear-gradient(to bottom,#2563EB,#0B1F3A);
-  background-color: var(--cor-neutra4);
-  padding: 1rem;
-  padding-block: 2rem;
-  color: var(--cor-principal5);
-  h2,p{
-    padding: 5px;
-    /* text-shadow: 0 0 10px black; */
+  }
+  
+  .pronto-para-transformar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5px;
+    background-image: linear-gradient(to bottom,#2563EB,#0B1F3A);
+    background-color: var(--cor-neutra4);
+    padding: 1rem;
+    padding-block: 2rem;
+    color: var(--cor-principal5);
+    h2,p{
+      padding: 5px;
+      text-shadow: 0 0 5px black;
   }
 }
 
