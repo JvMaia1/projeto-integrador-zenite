@@ -7,16 +7,20 @@ const ancoraComoFunciona = document.querySelector('#ancora-como-funciona');
 const botaoRolagem = document.querySelector('#botao-rolar');
 heroVideo.playbackRate = 0.75;
 console.log(botaoRolagem);
+const footer = document.querySelector('.pronto-para-transformar');
 
-const tituloResponsivo = new IntersectionObserver (([entry]) => {
-    if (entry.isIntersecting){
-        tituloNav.classList.remove('visivel');
-    } else {tituloNav.classList.add('visivel');}
-    threshold: 0;
+function esmaecerElemento(elementoObservado, elementoAlterado){
+    const elementoResponsivo = new IntersectionObserver (([entry]) => {
+        if (entry.isIntersecting){
+            elementoAlterado.classList.add('visivel');
+        } else  elementoAlterado.classList.remove('visivel');
+        {
+            threshold: 0;
+        }
 });
+elementoResponsivo.observe(elementoObservado)
+}
 
+// esmaecerElemento(titulo, tituloNav)
 
-
-tituloResponsivo.observe(titulo);
-
-
+esmaecerElemento(titulo, botaoRolagem)

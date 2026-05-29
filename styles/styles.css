@@ -27,6 +27,7 @@
   margin: 0;
   padding: 0;
 }
+*{margin-inline: auto;}
 
 html {
   overflow-x: hidden; /* Evitando que a pagina crie uma barra lateral */
@@ -56,9 +57,11 @@ main{
   background-color: var(--cor-neutra1);
 }
 
-h1, nav, nav a { 
-  text-shadow: 0 0 10px black;
+nav a { 
+  /* text-shadow: 0 0 10px black; */
+  font-weight: bold;
   color: var(--cor-principal5);
+  text-shadow: 0 0 5px var(--cor-neutra1);
   text-decoration: none;
 }
 
@@ -83,6 +86,8 @@ h1, nav, nav a {
   h1 {
     position: absolute;
     top: 20vh;
+    color: var(--cor-principal5);
+    text-shadow: 0 0 10px black;
     
     font-size: clamp(4rem, 10vw, 16rem);
     
@@ -116,7 +121,7 @@ h1, nav, nav a {
 
 .cabecalho .linha-gradiente::after {
   position: absolute;
-  top: 90%;
+  top: 100%;
   left: 0;
   width: 100%;
 }
@@ -139,8 +144,8 @@ h1, nav, nav a {
     transition: 0.3s ease-in-out;
     
     &:hover, &:focus-visible{
-      color: var(--cor-principal3);
-      text-shadow: 0 0 10px #00000049;
+      color: var(--cor-principal2);
+      text-shadow: none;
       &::after{
         animation-name: transicao_barra_links;
         animation-duration: 0.3s;
@@ -161,26 +166,31 @@ h1, nav, nav a {
 }
 
 #titulo-nav{
-  font-size: clamp(1.5rem, 3vw, 8rem);
+  /* font-size: clamp(1.5rem, 2vw, 8rem); */
   font-family: var(--fonte-titulos);
-  /* user-select: none; */
-  cursor: default ;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  text-shadow: black 0px 0px 20px;
+  /* cursor: default ; */
+  /* opacity: 0; */
+  /* text-shadow: black 0px 0px 20px; */
 }
 
-#titulo-nav.visivel{
+#botao-rolar, #titulo-nav {transition: opacity 0.5s ease;}
+
+#botao-rolar.visivel, #titulo-nav.visivel{
   opacity: 1;
   cursor: pointer ;
 }
 
+p{
+  text-align: start;
+}
 .links-menu{
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  background-color: #070d1b9c;
-  box-shadow:  0 0 20px black;
+  justify-content: center;
+  gap:20%;
+  background-color: hsla(0, 0%, 0%, 0.685);
+  border-block-end: solid 1px var(--cor-principal2);
+  box-shadow:  0 0 7px var(--cor-principal2);
   width: 100vw;
   min-height: fit-content;
   height: 3vw;
@@ -203,34 +213,48 @@ h1, nav, nav a {
 }
 
 .cta-header, .pronto-para-transformar{
-  a, a #cta-transformar{
+  a, a .cta-transformar{
     font-family: 'Inter', sans-serif;
     display: inline-block;
     position: relative;
     color: var(--cor-neutra5);
     font-size: clamp(1rem, 1.8vw, 6rem);
-    /* width: fit-content; */
     text-decoration: none;
-    background-color: hsla(217, 33%, 17%, 0.85);
+    background-color: var(--cor-neutra2);
     border-radius: 10px;
     padding: 5px 10px;
-    box-shadow: 0 0 10px black;
+    /* box-shadow: 0 0 10px black; */
     text-shadow: none;
     margin: 5px;
-    border: 1px solid #2564eb80;
-}
+    border: 1px solid #b1bcd380;
+  }
   
   a:hover, a:focus-visible{ 
-    color:var(--cor-principal2); 
+    background-color:var(--cor-principal3); 
     box-shadow: 0 0 2px var(--cor-principal2);
+    /* text-shadow: 0 0 5px black; */
   }     
+}
+#link-saiba-mais{
+  background-color: #1E293B;
+  &:hover, &:focus-visible{ 
+    background-color:var(--cor-principal1); 
+    }     
+  }
+  
+  #link-saiba-mais{
+    background-color: var(--cor-neutra4);
+    color: var(--cor-neutra1);
+    &:hover, &:focus-visible{ 
+      background-color:var(--cor-neutra5); 
+      }     
 }
 
 #botao-rolar{
   /*Tamanho  */
   width: 52px;
   height: 52px;  
-
+  opacity: 0;
   /* Posição */
   position: fixed;
   top: 90vh;
@@ -251,14 +275,31 @@ h1, nav, nav a {
 }
 
 .compromisso{
-  height: 50vh;
-  min-height: fit-content;
+  height: 70vh;
   ul{
     margin-inline-start: 1rem ;
   }
 }
 
-.como-funciona{height: 100vh;}
+.como-funciona{
+  height: 70vh;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  .cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card{
+    flex: 1 1 30%;
+    padding: 3rem;
+    p{text-align: start;}
+  }
+  .cabecalho{
+    /* flex: 1 1 100%; */
+  }
+}
 
 .como-funciona, .compromisso { 
   display: flex;
@@ -277,6 +318,7 @@ h1, nav, nav a {
     width: 150px;
     height: auto;
   }
+
 }
 
 .como-funciona, .problemas-que-resolvemos, .compromisso{
@@ -309,14 +351,15 @@ h1, nav, nav a {
   user-select: none;
   transition: ease-in-out 0.1s;
   align-items: center;
+  text-align: start;
   &:hover, &:focus-visible{
     transform: scale(1.008);
   }
   
-  h2, h3, p{
+  h2, h3{
     width: 100%;
-    text-align: center;
-    font-size: clamp(1rem, 1.5vw, 3rem);
+    /* text-align: center; */
+    font-size: clamp(1rem, 1.2vw, 3rem);
   }
   
   ul{
@@ -330,13 +373,21 @@ h1, nav, nav a {
 
 .problemas-que-resolvemos{
   color: var(--cor-principal5);
-  /* height: 50vh; */
+  background-color: #e4e7eb;
+  color: var(--cor-neutra1);
+  padding-block: 6rem;
+  margin-block: 3rem;
   min-height: fit-content;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  .card{
+    color: var(--cor-neutra1);
+    text-shadow: none;
+    padding: 3rem;
+  }
   
 }
 
@@ -398,7 +449,7 @@ h1, nav, nav a {
     position: absolute;
     inset: 0;
 
-    background-image: url(../conteudo/imagens/pessoas-segurando-plantas.jpg);
+    background-image: url(../conteudo/imagens/pessoas-segurando-plantas-c2.jpg);
     background-size: cover;
 
     opacity: 0.2; /* controla transparência da imagem */
@@ -415,7 +466,7 @@ h1, nav, nav a {
     position: absolute;
     inset: 0;
 
-    background-image: url(../conteudo/imagens/pessoas-planejando-com-documentos.jpg);
+    background-image: url(../conteudo/imagens/pessoas-planejando-com-documentos-c2.jpg);
     background-size: cover;
 
     opacity: 0.2; /* controla transparência da imagem */
@@ -432,26 +483,28 @@ h1, nav, nav a {
     position: absolute;
     inset: 0;
 
-    background-image: url(../conteudo/imagens/aperto-de-mao-empresarial.jpg);
+    background-image: url(../conteudo/imagens/aperto-de-mao-empresarial-c2.jpg);
     background-size: cover;
     background-position: center top;
     /* background-repeat: no-repeat; */
 
     opacity: 0.2; /* controla transparência da imagem */
-}
-
-.pronto-para-transformar{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-  gap: 5px;
-  background-image: linear-gradient(to right,#7C3AED,#2563EB,#0B1F3A);
-  padding: 1rem;
-  color: var(--cor-principal5);
-  h2,p{
-    padding: 5px;
-    text-shadow: 0 0 10px black;
+  }
+  
+  .pronto-para-transformar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5px;
+    background-image: linear-gradient(to bottom,#2563EB,#0B1F3A);
+    background-color: var(--cor-neutra4);
+    padding: 1rem;
+    padding-block: 2rem;
+    color: var(--cor-principal5);
+    h2,p{
+      padding: 5px;
+      text-shadow: 0 0 5px black;
   }
 }
 
@@ -460,7 +513,7 @@ footer {
   font-size: clamp(0.8rem, 0.8vw, 3rem);
   text-align: center;
   display: flex;
-  gap: 1rem;
+  z-index: 6;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
@@ -481,6 +534,7 @@ footer {
 }
 
 .footer-contato{
+  display: flex;
   text-align: start;
   padding: 10px;
   p{padding: 5px;}
@@ -488,10 +542,12 @@ footer {
 
 .logo{
   display: flex;
+  font-family: var(--fonte-titulos);
   align-items: center;
   .logo-original {
     width: clamp(50px, 3.5vw, 150px);
-    margin: 1rem ;
+    margin: 0.3rem ;
+    padding: 10px;
   }
 }
 
