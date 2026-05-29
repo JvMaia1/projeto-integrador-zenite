@@ -160,16 +160,16 @@ nav {
 }
 
 #titulo-nav{
-  font-size: clamp(1.5rem, 3vw, 8rem);
+  font-size: clamp(1.5rem, 2vw, 8rem);
   font-family: var(--fonte-titulos);
-  /* user-select: none; */
   cursor: default ;
   opacity: 0;
-  transition: opacity 0.5s ease;
   text-shadow: black 0px 0px 20px;
 }
 
-#titulo-nav.visivel{
+#botao-rolar, #titulo-nav {transition: opacity 0.5s ease;}
+
+#botao-rolar.visivel, #titulo-nav.visivel{
   opacity: 1;
   cursor: pointer ;
 }
@@ -209,7 +209,6 @@ nav {
     position: relative;
     color: var(--cor-neutra5);
     font-size: clamp(1rem, 1.8vw, 6rem);
-    /* width: fit-content; */
     text-decoration: none;
     background-color: hsla(217, 33%, 17%, 0.85);
     border-radius: 10px;
@@ -230,7 +229,7 @@ nav {
   /*Tamanho  */
   width: 52px;
   height: 52px;  
-
+  opacity: 0;
   /* Posição */
   position: fixed;
   top: 90vh;
@@ -387,7 +386,7 @@ footer {
   font-size: clamp(0.8rem, 0.8vw, 3rem);
   text-align: center;
   display: flex;
-  /* gap: 1rem; */
+  z-index: 6;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
