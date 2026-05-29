@@ -57,9 +57,11 @@ main{
   background-color: var(--cor-neutra1);
 }
 
-h1, nav, nav a { 
-  text-shadow: 0 0 10px black;
+nav a { 
+  /* text-shadow: 0 0 10px black; */
+  font-weight: bold;
   color: var(--cor-principal5);
+  text-shadow: 0 0 5px var(--cor-neutra1);
   text-decoration: none;
 }
 
@@ -84,6 +86,8 @@ h1, nav, nav a {
   h1 {
     position: absolute;
     top: 20vh;
+    color: var(--cor-principal5);
+    text-shadow: 0 0 10px black;
     
     font-size: clamp(4rem, 10vw, 16rem);
     
@@ -140,8 +144,8 @@ h1, nav, nav a {
     transition: 0.3s ease-in-out;
     
     &:hover, &:focus-visible{
-      color: var(--cor-principal3);
-      text-shadow: 0 0 10px #00000049;
+      color: var(--cor-principal2);
+      text-shadow: none;
       &::after{
         animation-name: transicao_barra_links;
         animation-duration: 0.3s;
@@ -162,11 +166,11 @@ h1, nav, nav a {
 }
 
 #titulo-nav{
-  font-size: clamp(1.5rem, 2vw, 8rem);
+  /* font-size: clamp(1.5rem, 2vw, 8rem); */
   font-family: var(--fonte-titulos);
   /* cursor: default ; */
   /* opacity: 0; */
-  text-shadow: black 0px 0px 20px;
+  /* text-shadow: black 0px 0px 20px; */
 }
 
 #botao-rolar, #titulo-nav {transition: opacity 0.5s ease;}
@@ -184,8 +188,9 @@ p{
   align-items: center;
   justify-content: center;
   gap:20%;
-  background-color: #070d1b9c;
-  box-shadow:  0 0 20px black;
+  background-color: hsla(0, 0%, 0%, 0.685);
+  border-block-end: solid 1px var(--cor-principal2);
+  box-shadow:  0 0 7px var(--cor-principal2);
   width: 100vw;
   min-height: fit-content;
   height: 3vw;
@@ -444,7 +449,7 @@ p{
     position: absolute;
     inset: 0;
 
-    background-image: url(../conteudo/imagens/pessoas-segurando-plantas-c.jpg);
+    background-image: url(../conteudo/imagens/pessoas-segurando-plantas-c2.jpg);
     background-size: cover;
 
     opacity: 0.2; /* controla transparência da imagem */
@@ -461,7 +466,7 @@ p{
     position: absolute;
     inset: 0;
 
-    background-image: url(../conteudo/imagens/pessoas-planejando-com-documentos-c.jpg);
+    background-image: url(../conteudo/imagens/pessoas-planejando-com-documentos-c2.jpg);
     background-size: cover;
 
     opacity: 0.2; /* controla transparência da imagem */
@@ -478,7 +483,7 @@ p{
     position: absolute;
     inset: 0;
 
-    background-image: url(../conteudo/imagens/aperto-de-mao-empresarial-c.jpg);
+    background-image: url(../conteudo/imagens/aperto-de-mao-empresarial-c2.jpg);
     background-size: cover;
     background-position: center top;
     /* background-repeat: no-repeat; */
