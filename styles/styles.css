@@ -27,7 +27,6 @@
   margin: 0;
   padding: 0;
 }
-*{margin-inline: auto;}
 
 html {
   overflow-x: hidden; /* Evitando que a pagina crie uma barra lateral */
@@ -187,7 +186,7 @@ p{
   display: flex;
   align-items: center;
   justify-content: center;
-  gap:20%;
+  gap:10%;
   background-color: hsla(0, 0%, 0%, 0.685);
   border-block-end: solid 1px var(--cor-principal2);
   box-shadow:  0 0 7px var(--cor-principal2);
@@ -283,8 +282,9 @@ p{
 
 .como-funciona{
   height: 70vh;
-  flex-wrap: wrap;
   flex-direction: column;
+  max-width: 100%;
+  padding-block-start: 1rem;
 
   .cards{
     display: flex;
@@ -576,4 +576,3 @@ footer {
     flex-flow: row;
   }
 }
-
