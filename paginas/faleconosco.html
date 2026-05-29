@@ -42,10 +42,10 @@
   <main>
     <!-- CONTATOS -->
     <article class="contatos" aria-labelledby="contatos-titulo">
-      <h2 id="contatos-titulo">Contatos</h2>
+      <!-- <h2 id="contatos-titulo">Contatos</h2> -->
 
       <div class="cards">
-        <div class="contatos">
+        <div class="contato">
           <section class="card">
             <p>E-mail:</p>
             <a href="mailto:contato@zenite.com.br">contato@zenite.com.br</a>
@@ -99,30 +99,6 @@
                  placeholder="(00) 00000-0000"
                  autocomplete="tel"
                  required>
-
-          <label for="organizacao">Organização: <span aria-label="obrigatório">*</span></label>
-          <input type="text" id="organizacao" name="organizacao"
-                 placeholder="Nome do órgão ou empresa"
-                 autocomplete="organization"
-                 required>
-
-          <label for="cargo">Cargo: <span aria-label="obrigatório">*</span></label>
-          <input type="text" id="cargo" name="cargo"
-                 placeholder="Seu cargo"
-                 autocomplete="organization-title"
-                 required>
-
-          <label for="interesse">Interesse: <span aria-label="obrigatório">*</span></label>
-          <select id="interesse" name="interesse" required>
-            <option value="">Selecione um interesse</option>
-            <option value="alertas">Alertas de Enchente</option>
-            <option value="planejamento">Planejamento Urbano</option>
-            <option value="gestao-de-crise">Gestão de Crise</option>
-            <option value="licenciamento">Licenciamento (Construtora)</option>
-            <option value="precificacao">Precificação (Seguradora)</option>
-            <option value="gestao-reservatorios">Gestão de Reservatórios</option>
-            <option value="outro">Outros</option>
-          </select>
 
           <label for="mensagem">Mensagem: <span aria-label="obrigatório">*</span></label>
           <textarea id="mensagem" name="mensagem"

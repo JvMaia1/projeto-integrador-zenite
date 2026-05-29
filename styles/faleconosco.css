@@ -192,7 +192,7 @@ body{
   text-decoration: underline;
 }
 
-.contatos .cards {
+.contato .cards {
   display: grid;
   width: 90%;
   margin-inline: auto;
@@ -202,7 +202,7 @@ body{
 }
 
 .contatos .card {
-  justify-content: center;
+  /* justify-content: center; */
   flex: 1 1 240px;
   background-color: var(--cor-neutra2);
   text-align: center;
@@ -215,11 +215,9 @@ body{
   gap: 0.5rem;
   transition: transform var(--transition), box-shadow var(--transition);
 }
-.contatos .card:last-child{
-  justify-content: flex-start;
-}
 
-.contatos .card:hover {
+
+.contato .card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
 }
@@ -364,6 +362,7 @@ form > p:last-child {
   color: var(--cor-neutra5);
   cursor: pointer;
   transition: background-color var(--transition);
+  flex-direction: column;
 }
 
 .faq .card:hover,
@@ -402,7 +401,7 @@ form > p:last-child {
 iframe {
   border-radius: var(--radius-sm);
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 /* ─── RESPONSIVIDADE ─── */
@@ -429,13 +428,18 @@ iframe {
 }
 
   /* Coluna esquerda — empilha email e telefone */
-  .cards > .contatos {
+  .cards > .contato {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     padding: 0;
+    /* justify-content: center; */
     /* align-items: center; */
   }
+  .contato .card{
+    justify-content: center;
+  }
+  
 
   /* Mapa ocupa a coluna da direita inteira */
   .card.endereco {
