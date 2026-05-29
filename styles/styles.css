@@ -163,8 +163,8 @@ h1, nav, nav a {
 #titulo-nav{
   font-size: clamp(1.5rem, 2vw, 8rem);
   font-family: var(--fonte-titulos);
-  cursor: default ;
-  opacity: 0;
+  /* cursor: default ; */
+  /* opacity: 0; */
   text-shadow: black 0px 0px 20px;
 }
 
@@ -175,6 +175,9 @@ h1, nav, nav a {
   cursor: pointer ;
 }
 
+p{
+  text-align: start;
+}
 .links-menu{
   display: flex;
   align-items: center;
@@ -204,26 +207,41 @@ h1, nav, nav a {
 }
 
 .cta-header, .pronto-para-transformar{
-  a, a #cta-transformar{
+  a, a .cta-transformar{
     font-family: 'Inter', sans-serif;
     display: inline-block;
     position: relative;
     color: var(--cor-neutra5);
     font-size: clamp(1rem, 1.8vw, 6rem);
     text-decoration: none;
-    background-color: hsla(217, 33%, 17%, 0.85);
+    background-color: var(--cor-neutra2);
     border-radius: 10px;
     padding: 5px 10px;
-    box-shadow: 0 0 10px black;
+    /* box-shadow: 0 0 10px black; */
     text-shadow: none;
     margin: 5px;
-    border: 1px solid #2564eb80;
-}
+    border: 1px solid #b1bcd380;
+  }
   
   a:hover, a:focus-visible{ 
-    color:var(--cor-principal2); 
+    background-color:var(--cor-principal3); 
     box-shadow: 0 0 2px var(--cor-principal2);
+    /* text-shadow: 0 0 5px black; */
   }     
+}
+#link-saiba-mais{
+  background-color: #1E293B;
+  &:hover, &:focus-visible{ 
+    background-color:var(--cor-principal1); 
+    }     
+  }
+  
+  #link-saiba-mais{
+    background-color: var(--cor-neutra4);
+    color: var(--cor-neutra1);
+    &:hover, &:focus-visible{ 
+      background-color:var(--cor-neutra5); 
+      }     
 }
 
 #botao-rolar{
@@ -251,14 +269,31 @@ h1, nav, nav a {
 }
 
 .compromisso{
-  height: 50vh;
-  min-height: fit-content;
+  height: 70vh;
   ul{
     margin-inline-start: 1rem ;
   }
 }
 
-.como-funciona{height: 100vh;}
+.como-funciona{
+  height: 70vh;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  .cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card{
+    flex: 1 1 30%;
+    padding: 3rem;
+    p{text-align: start;}
+  }
+  .cabecalho{
+    /* flex: 1 1 100%; */
+  }
+}
 
 .como-funciona, .compromisso { 
   display: flex;
@@ -277,6 +312,7 @@ h1, nav, nav a {
     width: 150px;
     height: auto;
   }
+
 }
 
 .como-funciona, .problemas-que-resolvemos, .compromisso{
@@ -309,14 +345,15 @@ h1, nav, nav a {
   user-select: none;
   transition: ease-in-out 0.1s;
   align-items: center;
+  text-align: start;
   &:hover, &:focus-visible{
     transform: scale(1.008);
   }
   
-  h2, h3, p{
+  h2, h3{
     width: 100%;
-    text-align: center;
-    font-size: clamp(1rem, 1.5vw, 3rem);
+    /* text-align: center; */
+    font-size: clamp(1rem, 1.2vw, 3rem);
   }
   
   ul{
@@ -330,13 +367,21 @@ h1, nav, nav a {
 
 .problemas-que-resolvemos{
   color: var(--cor-principal5);
-  /* height: 50vh; */
+  background-color: #e4e7eb;
+  color: var(--cor-neutra1);
+  padding-block: 6rem;
+  margin-block: 3rem;
   min-height: fit-content;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  .card{
+    color: var(--cor-neutra1);
+    text-shadow: none;
+    padding: 3rem;
+  }
   
 }
 
@@ -398,7 +443,7 @@ h1, nav, nav a {
     position: absolute;
     inset: 0;
 
-    background-image: url(../conteudo/imagens/pessoas-segurando-plantas.jpg);
+    background-image: url(../conteudo/imagens/pessoas-segurando-plantas-c.jpg);
     background-size: cover;
 
     opacity: 0.2; /* controla transparência da imagem */
@@ -415,7 +460,7 @@ h1, nav, nav a {
     position: absolute;
     inset: 0;
 
-    background-image: url(../conteudo/imagens/pessoas-planejando-com-documentos.jpg);
+    background-image: url(../conteudo/imagens/pessoas-planejando-com-documentos-c.jpg);
     background-size: cover;
 
     opacity: 0.2; /* controla transparência da imagem */
@@ -432,7 +477,7 @@ h1, nav, nav a {
     position: absolute;
     inset: 0;
 
-    background-image: url(../conteudo/imagens/aperto-de-mao-empresarial.jpg);
+    background-image: url(../conteudo/imagens/aperto-de-mao-empresarial-c.jpg);
     background-size: cover;
     background-position: center top;
     /* background-repeat: no-repeat; */
@@ -446,12 +491,14 @@ h1, nav, nav a {
   align-items: center;
   justify-content: space-around;
   gap: 5px;
-  background-image: linear-gradient(to right,#7C3AED,#2563EB,#0B1F3A);
+  background-image: linear-gradient(to bottom,#2563EB,#0B1F3A);
+  background-color: var(--cor-neutra4);
   padding: 1rem;
+  padding-block: 2rem;
   color: var(--cor-principal5);
   h2,p{
     padding: 5px;
-    text-shadow: 0 0 10px black;
+    /* text-shadow: 0 0 10px black; */
   }
 }
 

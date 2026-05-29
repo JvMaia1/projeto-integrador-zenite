@@ -12,8 +12,8 @@ const footer = document.querySelector('.pronto-para-transformar');
 function esmaecerElemento(elementoObservado, elementoAlterado){
     const elementoResponsivo = new IntersectionObserver (([entry]) => {
         if (entry.isIntersecting){
-            elementoAlterado.classList.remove('visivel');
-        } else  elementoAlterado.classList.add('visivel');
+            elementoAlterado.classList.add('visivel');
+        } else  elementoAlterado.classList.remove('visivel');
         {
             threshold: 0;
         }
@@ -21,6 +21,6 @@ function esmaecerElemento(elementoObservado, elementoAlterado){
 elementoResponsivo.observe(elementoObservado)
 }
 
-esmaecerElemento(titulo, tituloNav)
+// esmaecerElemento(titulo, tituloNav)
 
-esmaecerElemento(footer, botaoRolagem)
+esmaecerElemento(titulo, botaoRolagem)
