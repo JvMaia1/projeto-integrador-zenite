@@ -296,9 +296,7 @@ p{
     padding: 3rem;
     p{text-align: start;}
   }
-  .cabecalho{
-    /* flex: 1 1 100%; */
-  }
+
 }
 
 .como-funciona, .compromisso { 
