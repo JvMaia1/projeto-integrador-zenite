@@ -58,7 +58,6 @@ main{
 
 nav a { 
   /* text-shadow: 0 0 10px black; */
-  font-weight: bold;
   color: var(--cor-principal5);
   text-shadow: 0 0 5px var(--cor-neutra1);
   text-decoration: none;
@@ -203,6 +202,7 @@ p{
   color: var(--cor-neutra4);
   text-shadow: 0 0 10px black;
   p{
+    text-align: center;
     user-select: none;
     position: relative;
     font-size: clamp(1rem, 1.6vw, 8rem);
@@ -296,9 +296,6 @@ p{
     padding: 3rem;
     p{text-align: start;}
   }
-  .cabecalho{
-    /* flex: 1 1 100%; */
-  }
 }
 
 .como-funciona, .compromisso { 
@@ -327,15 +324,6 @@ p{
     margin: 0 auto;
     margin-block-end: 15px;
   }
-  
-  .cabecalho {
-    
-    h2{
-      font-size: clamp(1.5rem, 3vw, 8rem);
-      font-family: var(--fonte-titulos);
-    }
-  }
-  
 }
 
 .card{
@@ -397,6 +385,13 @@ p{
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  h2{
+      font-size: clamp(1.5rem, 3vw, 8rem);
+      font-family: var(--fonte-titulos);
+  }
+  p{
+    padding: 5px;
+  }
 }
 
 .problemas-que-resolvemos .cards{
@@ -434,6 +429,11 @@ p{
     border-radius: 10px;
     background-color: hsla(217, 33%, 17%, 0.8);
     box-shadow: 0 0 5px black;
+    ul{
+      li{
+        padding: 5px;
+      }
+    }
   }
 }
 /*----------------IMG FUNDO CARD COMPROMISSO---------------------*/

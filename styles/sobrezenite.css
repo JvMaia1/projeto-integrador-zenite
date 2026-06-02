@@ -38,7 +38,6 @@ html {
 }
 
 body {
-    font-family: "Poppins", sans-serif;
     background: #ffffff;
     color: #111827;
     line-height: 1.6;
@@ -383,6 +382,7 @@ VALOR ESTRATÉGICO
 
 .valor-lista{
     summary{
+        display: inline list-item;
         padding-block: 0.5rem;
         cursor: pointer;
         &:hover{
@@ -413,7 +413,7 @@ VALOR ESTRATÉGICO
    CTA FINAL
 ========================================= */
 
-.pronto-para-transformar{
+/* .pronto-para-transformar{
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -429,7 +429,6 @@ VALOR ESTRATÉGICO
         font-family: 'Inter', sans-serif;
         display: inline-block;
         position: relative;
-        /* z-index: 999; */
         color: var(--cor-neutra5);
         font-size: clamp(1rem, 1.8vw, 6rem);
         width: fit-content;
@@ -442,7 +441,8 @@ VALOR ESTRATÉGICO
         margin: 10px;
         border: 1px solid #2564eb80;
     }
-}
+} */
+ 
 header{
     height: 100%;
 }
