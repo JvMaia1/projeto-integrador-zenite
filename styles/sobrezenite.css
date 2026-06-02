@@ -405,47 +405,14 @@ VALOR ESTRATÉGICO
 }
 
 .links-menu a[aria-current="page"]::after {
-  opacity: 1; /* mantém a barrinha do gradiente sempre visível */
-  animation: none;
+    opacity: 1; /* mantém a barrinha do gradiente sempre visível */
+    animation: none;
 }
 
-/* =========================================
-   CTA FINAL
-========================================= */
-
-/* .pronto-para-transformar{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-image: linear-gradient(to right,#7C3AED,#2563EB,#0B1F3A);
-    padding: 2rem;
-    color: var(--cor-principal5);
-
-    h2,p{
-        padding: 5px;
-        text-shadow: 0 0 10px black;
-    }
-    a, a #cta-transformar{
-        font-family: 'Inter', sans-serif;
-        display: inline-block;
-        position: relative;
-        color: var(--cor-neutra5);
-        font-size: clamp(1rem, 1.8vw, 6rem);
-        width: fit-content;
-        text-decoration: none;
-        background-color: hsla(217, 33%, 17%, 0.7);
-        border-radius: 10px;
-        padding: 5px 20px;
-        box-shadow: 0 0 10px black;
-        text-shadow: none;
-        margin: 10px;
-        border: 1px solid #2564eb80;
-    }
-} */
- 
 header{
     height: 100%;
 }
+
 #titulo-nav {
     opacity: 1;
     cursor: pointer;
@@ -505,61 +472,6 @@ header{
     }
 
 }
-
-/* 
-@media (max-width: 768px) {
-
-    .hero-actions {
-        flex-direction: column;
-    }
-
-    .hero-actions .btn {
-        width: 100%;
-    }
-
-    .objetivo-card,
-    .impact-card {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .impact-card h3 {
-        min-width: auto;
-    }
-
-    .tecnologia-grid {
-        grid-template-columns: 1fr;
-    }
-    .objetivo-card img{
-        width: 310px;
-        height: 250px;
-    }
-}
-
-@media (max-width: 480px) {
-
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .hero-content h2 {
-        font-size: 2.2rem;
-    }
-
-    .btn {
-        width: 100%;
-    }
-
-    .objetivo-card img {
-        width: 250px;
-        height: 200px;
-    }
-}
-
-
-
-
- */
 
 @media (max-width: 500px ){
     .objetivo-card{
