@@ -368,7 +368,7 @@ p{
   background-color: #e4e7eb;
   color: var(--cor-neutra1);
   padding-block: 6rem;
-  margin-block: 3rem;
+  /* margin-block: 3rem; */
   min-height: fit-content;
   display: flex;
   flex-wrap: wrap;
