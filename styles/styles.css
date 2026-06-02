@@ -51,7 +51,7 @@ main::before{
 main{
   position: relative;
   isolation: isolate;
-  /* background-image: url(../conteudo/imagens/fundo.jpeg); */
+  /* background-image: url(./conteudo/imagens/fundo.jpeg); */
   background-size: cover;
   background-color: var(--cor-neutra1);
 }
@@ -462,7 +462,7 @@ p{
     position: absolute;
     inset: 0;
 
-    background-image: url(../conteudo/imagens/pessoas-segurando-plantas-c2.jpg);
+    background-image: url(./conteudo/imagens/pessoas-segurando-plantas-c2.jpg);
     background-size: cover;
 
     opacity: 0.2; /* controla transparência da imagem */
@@ -479,7 +479,7 @@ p{
     position: absolute;
     inset: 0;
 
-    background-image: url(../conteudo/imagens/pessoas-planejando-com-documentos-c2.jpg);
+    background-image: url(./conteudo/imagens/pessoas-planejando-com-documentos-c2.jpg);
     background-size: cover;
 
     opacity: 0.2; /* controla transparência da imagem */
@@ -496,7 +496,7 @@ p{
     position: absolute;
     inset: 0;
 
-    background-image: url(../conteudo/imagens/aperto-de-mao-empresarial-c2.jpg);
+    background-image: url(./conteudo/imagens/aperto-de-mao-empresarial-c2.jpg);
     background-size: cover;
     background-position: center top;
     /* background-repeat: no-repeat; */
