@@ -17,7 +17,7 @@
     <!-- Fonte -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <!-- Estilos -->
     <link rel="stylesheet" href="./styles/styles.css">
@@ -25,7 +25,7 @@
 <body>
   <header id="topo-pagina">
     
-    <video autoplay muted src="./conteudo/videos/video-tempestade-c.mp4"></video>
+    <video autoplay playsinline muted src="./conteudo/videos/video-tempestade-c.mp4" poster="./conteudo/imagens/fundo-video.jpeg"></video>
     
     <h1 id="titulo">Zênite</h1>
     <nav id="menu" aria-label="Menu principal">
@@ -43,7 +43,7 @@
       <a id="link-saiba-mais" href="#como-funciona">Saiba mais</a>
     </div>
 
-    <a href="#como-funciona"> <img id="botao-rolar" loading="lazy" src="./conteudo/imagens/seta-baixo.png" alt="seta para baixo para rolar a pagina para baixo e saber mais sobre a zenite"></a>
+    <a id="link-botao-rolar" href="#como-funciona"> <img id="botao-rolar" loading="lazy" src="./conteudo/imagens/seta-baixo.png" alt="seta para baixo para rolar a pagina para baixo e saber mais sobre a zenite" width="30px" height="50px"></a>
   </header>
 
   <main>
@@ -56,7 +56,7 @@
       <div class="cards">
         <section class="card">
 
-          <img src="./conteudo/imagens/mapa-3d.png" alt="Mapa 3D Interativo">
+          <img src="./conteudo/imagens/mapa-3d.png" loading="lazy" alt="Mapa 3D Interativo" width="200px" height="200px">
           
           <div class="texto-card">
             <h3>Mapa 3D interativo</h3>
@@ -67,7 +67,7 @@
         
         <section class="card">
 
-          <img src="./conteudo/imagens/analise-camadas.png" alt="Visualização de camadas climáticas urbanas">
+          <img src="./conteudo/imagens/analise-camadas.png" loading="lazy" alt="Visualização de camadas climáticas urbanas" width="200px" height="200px">
 
           <div class="texto-card">
             <h3>Camadas de análise</h3>
@@ -78,7 +78,7 @@
         
         <section id="ancora-como-funciona" class="card">
 
-          <img src="./conteudo/imagens/tecnologia-avancada.png" alt="">
+          <img src="./conteudo/imagens/tecnologia-avancada.png" loading="lazy" alt="Ilustração de chip tecnologico" width="200px" height="200px">
 
           <div class="texto-card">
             <h3>Tecnologia avançada</h3>
@@ -173,7 +173,7 @@
   <footer>
 
     <div class="logo">
-      <img class="logo-original" loading="lazy" src="./conteudo/imagens/nova-logo-zenite-cortada.png" alt="Logo Zênite">
+      <img class="logo-original" loading="lazy" src="./conteudo/imagens/nova-logo-zenite-cortada.png" alt="Logo Zênite" width="368px" height="390px" >
       <h2>Zênite - preditiva para cidades mais resilientes</h2>
     </div>
 

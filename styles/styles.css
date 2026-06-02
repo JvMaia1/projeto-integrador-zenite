@@ -1,19 +1,17 @@
-  /* META */
-
 :root {
   /* Cores principais */
-  --cor-principal1: #0B1F3A;
-  --cor-principal2: #2563EB;
-  --cor-principal3: #3882F6;
-  --cor-principal4: #7C3AED;
-  --cor-principal5: #F8FAFC;
+  --cor-azul-escuro: #0B1F3A;
+  --cor-azul-destaque: #2563EB;
+  --cor-azul-claro: #3882F6;
+  --cor-roxo: #7C3AED;
+  --cor-branco-titulos: #F8FAFC;
 
   /* Cores Neutras */
-  --cor-neutra1: #020617;
-  --cor-neutra2: #1E293B;
-  --cor-neutra3: #64748B;
-  --cor-neutra4: #E2E8F0;
-  --cor-neutra5: #FFFFFF;
+  --cor-azul-muito-escuro: #020617;
+  --cor-azul-opaco: #1E293B;
+  --cor-lilas-pastel: #64748B;
+  --cor-azul-acizentado: #E2E8F0;
+  --cor-branco: #FFFFFF;
 
   /* Fontes */
   --fonte-titulos: 'Poppins', sans-serif, system-ui;
@@ -36,32 +34,20 @@ html {
   scroll-behavior: smooth;
 }
 
-main::before{
-  content: '';
-
-  position: absolute;
-  inset: 0;
-
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(4px);
-
-  z-index: -1;
-}
-
 main{
   position: relative;
   isolation: isolate;
-  /* background-image: url(../conteudo/imagens/fundo.jpeg); */
   background-size: cover;
-  background-color: var(--cor-neutra1);
+  background-color: var(--cor-azul-muito-escuro);
 }
 
 nav a { 
-  /* text-shadow: 0 0 10px black; */
-  color: var(--cor-principal5);
-  text-shadow: 0 0 5px var(--cor-neutra1);
+  color: var(--cor-branco-titulos);
+  text-shadow: 0 0 5px var(--cor-azul-muito-escuro);
   text-decoration: none;
 }
+
+p{ text-align: start; }
 
 #topo-pagina {
   display: flex;
@@ -84,7 +70,7 @@ nav a {
   h1 {
     position: absolute;
     top: 20vh;
-    color: var(--cor-principal5);
+    color: var(--cor-branco-titulos);
     text-shadow: 0 0 10px black;
     
     font-size: clamp(4rem, 10vw, 16rem);
@@ -94,7 +80,7 @@ nav a {
     
     font-family: var(--fonte-titulos);
   }
-  a{margin-inline: auto;}
+  #link-botao-rolar{margin-inline: auto;}
 }
 
 
@@ -143,7 +129,7 @@ nav a {
     transition: 0.3s ease-in-out;
     
     &:hover, &:focus-visible{
-      color: var(--cor-principal2);
+      color: var(--cor-azul-destaque);
       text-shadow: none;
       &::after{
         animation-name: transicao_barra_links;
@@ -163,37 +149,30 @@ nav a {
     transition: opacity 0.3s ease;
   }
 }
+
 .links-menu a[aria-current="page"] {
-    color: var(--cor-principal3);
+    color: var(--cor-azul-claro);
     font-weight: 600;
 }
 
-#titulo-nav{
-  /* font-size: clamp(1.5rem, 2vw, 8rem); */
-  font-family: var(--fonte-titulos);
-  /* cursor: default ; */
-  /* opacity: 0; */
-  /* text-shadow: black 0px 0px 20px; */
+#titulo-nav{ font-family: var(--fonte-titulos); }
+
+#botao-rolar{
+  transition: opacity 0.5s ease;
+  &.visivel{
+    opacity: 1;
+    cursor: pointer ;
+  }
 }
 
-#botao-rolar, #titulo-nav {transition: opacity 0.5s ease;}
-
-#botao-rolar.visivel, #titulo-nav.visivel{
-  opacity: 1;
-  cursor: pointer ;
-}
-
-p{
-  text-align: start;
-}
 .links-menu{
   display: flex;
   align-items: center;
   justify-content: center;
-  gap:10%;
+  gap:15%;
   background-color: hsla(0, 0%, 0%, 0.685);
-  border-block-end: solid 1px var(--cor-principal2);
-  box-shadow:  0 0 7px var(--cor-principal2);
+  border-block-end: solid 1px var(--cor-azul-destaque);
+  box-shadow:  0 0 7px var(--cor-azul-destaque);
   width: 100vw;
   min-height: fit-content;
   height: 6vh;
@@ -204,7 +183,7 @@ p{
   top: 50vh;
   text-align: center;
   font-size: clamp(1rem, 3vw, 8rem);
-  color: var(--cor-neutra4);
+  color: var(--cor-azul-acizentado);
   text-shadow: 0 0 10px black;
   p{
     text-align: center;
@@ -221,10 +200,10 @@ p{
     font-family: 'Inter', sans-serif;
     display: inline-block;
     position: relative;
-    color: var(--cor-neutra5);
+    color: var(--cor-branco);
     font-size: clamp(1rem, 1.8vw, 6rem);
     text-decoration: none;
-    background-color: var(--cor-neutra2);
+    background-color: var(--cor-azul-opaco);
     border-radius: 10px;
     padding: 5px 10px;
     /* box-shadow: 0 0 10px black; */
@@ -234,26 +213,18 @@ p{
   }
   
   a:hover, a:focus-visible{ 
-    background-color:var(--cor-principal3); 
-    box-shadow: 0 0 2px var(--cor-principal2);
+    background-color:var(--cor-azul-claro); 
+    box-shadow: 0 0 2px var(--cor-azul-destaque);
     /* text-shadow: 0 0 5px black; */
   }     
 }
+
 #link-saiba-mais{
   background-color: #1E293B;
   &:hover, &:focus-visible{ 
-    background-color:var(--cor-principal1); 
-    }     
-  }
-  
-  #link-saiba-mais{
-    background-color: var(--cor-neutra4);
-    color: var(--cor-neutra1);
-    &:hover, &:focus-visible{ 
-      background-color:var(--cor-neutra5); 
-      }     
+    background-color:var(--cor-azul-escuro); 
+  }     
 }
-
 
 #botao-rolar{
   /* centraliação responsiva  */
@@ -320,7 +291,7 @@ p{
   align-items: center;
   justify-content: space-around;
   padding: 1rem;
-  color: var(--cor-principal5);
+  color: var(--cor-branco-titulos);
   text-shadow: 0 0 10px black;
   
   img{
@@ -339,11 +310,10 @@ p{
 }
 
 .card{
-  
   display: flex;
   max-width: 800px;
   gap: 1rem;
-  color: var(--cor-principal5);
+  color: var(--cor-branco-titulos);
   text-shadow: 0 0 10px black;
   padding: 1rem;
   padding-block-end: 2rem;
@@ -366,15 +336,13 @@ p{
     margin-inline-start: 5%;
   }
   
-  p, li{
-    font-size: clamp(1rem, 1vw, 6rem);
-  }
+  p, li{ font-size: clamp(1rem, 1vw, 6rem); }
 }
 
 .problemas-que-resolvemos{
-  color: var(--cor-principal5);
+  color: var(--cor-branco-titulos);
   background-color: #e4e7eb;
-  color: var(--cor-neutra1);
+  color: var(--cor-azul-muito-escuro);
   padding-block: 6rem;
   margin-block: 3rem;
   min-height: fit-content;
@@ -384,7 +352,7 @@ p{
   align-items: center;
   flex-direction: column;
   .card{
-    color: var(--cor-neutra1);
+    color: var(--cor-azul-muito-escuro);
     text-shadow: none;
     padding: 3rem;
   }
@@ -401,9 +369,7 @@ p{
       font-size: clamp(1.5rem, 3vw, 8rem);
       font-family: var(--fonte-titulos);
   }
-  p{
-    padding: 5px;
-  }
+  p{ padding: 5px; }
 }
 
 .problemas-que-resolvemos .cards{
@@ -415,12 +381,11 @@ p{
   flex-direction: column;
   justify-content: space-around;
 }
-.problemas-que-resolvemos .card{ 
-  border-inline-end: solid 5px var(--cor-principal2);
-  flex-direction: column;
-  /* flex-basis: 40%; */
-}
 
+.problemas-que-resolvemos .card{ 
+  border-inline-end: solid 5px var(--cor-azul-destaque);
+  flex-direction: column;
+}
 
 .compromisso {
   .cards{
@@ -432,7 +397,6 @@ p{
     gap: 1rem;
     justify-content: space-around;
   }
-  
   
   .card{
     flex: 1 1 20%;
@@ -449,75 +413,78 @@ p{
     }
   }
 }
+
 /*----------------IMG FUNDO CARD COMPROMISSO---------------------*/
 .compromisso .card:first-child {
-    position: relative;
-    overflow: hidden;
-    padding: 20px;
-    border-radius: 12px;
-    color: white;
-}
-.compromisso .card:first-child::before{
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  &::before{
     content: "";
     position: absolute;
     inset: 0;
-
+    
     background-image: url(../conteudo/imagens/pessoas-segurando-plantas-c2.jpg);
     background-size: cover;
-
+    
     opacity: 0.2; /* controla transparência da imagem */
+  }
 }
+
 .compromisso .card:nth-child(2){
-    position: relative;
-    overflow: hidden;
-    padding: 20px;
-    border-radius: 12px;
-    color: white;
-}
-.compromisso .card:nth-child(2)::before{
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  &::before{
     content: "";
     position: absolute;
     inset: 0;
-
+    
     background-image: url(../conteudo/imagens/pessoas-planejando-com-documentos-c2.jpg);
     background-size: cover;
-
+    
     opacity: 0.2; /* controla transparência da imagem */
+  }
 }
+
 .compromisso .card:last-child{
-    position: relative;
-    overflow: hidden;
-    padding: 20px;
-    border-radius: 12px;
-    color: white;
-}
-.compromisso .card:last-child::before{
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  &::before{
     content: "";
     position: absolute;
     inset: 0;
-
+    
     background-image: url(../conteudo/imagens/aperto-de-mao-empresarial-c2.jpg);
     background-size: cover;
     background-position: center top;
     /* background-repeat: no-repeat; */
-
+    
     opacity: 0.2; /* controla transparência da imagem */
   }
-  
-  .pronto-para-transformar{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    gap: 5px;
-    background-image: linear-gradient(to bottom,#2563EB,#0B1F3A);
-    background-color: var(--cor-neutra4);
-    padding: 1rem;
-    padding-block: 2rem;
-    color: var(--cor-principal5);
-    h2,p{
-      padding: 5px;
-      text-shadow: 0 0 5px black;
+}
+
+.pronto-para-transformar{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 5px;
+  background-image: linear-gradient(to bottom,#2563EB,#0B1F3A);
+  background-color: var(--cor-azul-acizentado);
+  padding: 1rem;
+  padding-block: 2rem;
+  color: var(--cor-branco-titulos);
+  h2,p{
+    padding: 5px;
+    text-shadow: 0 0 5px black;
   }
 }
 
@@ -531,12 +498,12 @@ footer {
   justify-content: space-around;
   align-items: center;
   height: fit-content;
-  background-color: var(--cor-principal1);
+  background-color: var(--cor-azul-escuro);
   a{
     color: white;
     text-decoration:underline;
     &:hover, &:focus-visible{
-      color: var(--cor-principal3)
+      color: var(--cor-azul-claro)
     }
   }
 }
@@ -564,21 +531,6 @@ footer {
   }
 }
 
-@keyframes sobe_desce{
-  from{transform: translateY(10px);}
-  to{transform: translateY(-10px);}
-}
-
-@keyframes transicao_barra_links {
-  from { transform: scaleX(0.1) ; }
-  to { transform: scaleX(1) ; }
-}
-
-@keyframes esmaecer{
-  from{opacity: 1;}
-  to{opacity:0.7;}
-}
-
 @media(min-width:768px){
   .problemas-que-resolvemos{
     .cards{
@@ -592,4 +544,19 @@ footer {
     flex-direction: row;
     h3,p{text-align: start;}
   }
+}
+
+@keyframes sobe_desce{
+  from{transform: translateY(10px);}
+  to{transform: translateY(-10px);}
+}
+
+@keyframes transicao_barra_links {
+  from { transform: scaleX(0.1) ; }
+  to { transform: scaleX(1) ; }
+}
+
+@keyframes esmaecer{
+  from{opacity: 1;}
+  to{opacity:0.7;}
 }
