@@ -163,6 +163,10 @@ nav a {
     transition: opacity 0.3s ease;
   }
 }
+.links-menu a[aria-current="page"] {
+    color: var(--cor-principal3);
+    font-weight: 600;
+}
 
 #titulo-nav{
   /* font-size: clamp(1.5rem, 2vw, 8rem); */
@@ -295,9 +299,6 @@ p{
     flex: 1 1 30%;
     padding: 3rem;
     p{text-align: start;}
-  }
-  .cabecalho{
-    /* flex: 1 1 100%; */
   }
 }
 
