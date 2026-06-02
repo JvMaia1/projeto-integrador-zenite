@@ -28,22 +28,59 @@
   <header>
     <nav id="menu" aria-label="Menu principal" role="navigation">
       <div class="links-menu">
-        <a class="linha-gradiente" href="./index.html">Inicio</a>
+        <a class="linha-gradiente" href="./index.html">Zênite</a>
         <a class="linha-gradiente" href="./sobre-zenite.html">Sobre nós</a>
         <a class="linha-gradiente" href="./faleconosco.html" aria-current="page">Fale Conosco</a>
       </div>
     </nav>
 
-    <section class="cta-header-fale-conosco">
-      <h1>Fale Conosco</h1>
-    </section>
+    
   </header>
 
   <main>
-    <!-- CONTATOS -->
-    <article class="contatos" aria-labelledby="contatos-titulo">
-      <!-- <h2 id="contatos-titulo">Contatos</h2> -->
+    
+    
+    <!------------------------------------------------------------- FORMULARIO -------------------------------------------------------------->
+    <section class="contatos" aria-labelledby="contatos-titulo">
+        <article id="formulario" class="solicitacao" aria-labelledby="form-titulo">
+          <section>
+            <form action="" method="post" novalidate>
+              <h2 id="form-titulo">Formulário de contato</h2>
+    
+              <label for="nome">Nome Completo: <span aria-label="obrigatório">*</span></label>
+              <input type="text" id="nome" name="nome"
+                    placeholder="Seu nome completo"
+                    autocomplete="name"
+                    required minlength="3">
+    
+              <label for="email">E-mail: <span aria-label="obrigatório">*</span></label>
+              <input type="email" id="email" name="email"
+                    placeholder="seu@email.com"
+                    autocomplete="email"
+                    required>
+    
+              <label for="telefone">Telefone: <span aria-label="obrigatório">*</span></label>
+              <input type="tel" id="telefone" name="telefone"
+                    placeholder="(00) 00000-0000"
+                    autocomplete="tel"
+                    required>
+    
+              <label for="mensagem">Mensagem: <span aria-label="obrigatório">*</span></label>
+              <textarea id="mensagem" name="mensagem"
+                        placeholder="Conte-nos sobre suas necessidades."
+                        required minlength="10"></textarea>
+    
+              <button type="submit" class="formulario-btn-enviar">➥ Enviar</button>
+    
+              <p>Ao enviar este formulário, você concorda com nossa
+                <a href="#" style="color: var(--cor-principal4); font-size: clamp(0.8rem, 0.75vw, 1rem)!important;">Política de Privacidade</a>
+                e aceita receber comunicações do Zênite.
+              </p>
+            </form>
+          </section>
+      </article>
 
+      <!-----------------------  CONTATOS  -------------------------------------------->
       <div class="cards">
         <div class="contato">
           <section class="card">
@@ -71,49 +108,11 @@
         </section>
       </div>
 
-      <!-- <p id="cta-formulario">
-        Preencha o <a href="#formulario">formulário</a> abaixo e nossa equipe entrará em contato em breve.
-      </p> -->
-    </article>
+       
+    </section>
 
     <!-- FORMULÁRIO -->
-    <article id="formulario" class="solicitacao" aria-labelledby="form-titulo">
-      <section>
-        <form action="" method="post" novalidate>
-          <h2 id="form-titulo">Formulário de Contato</h2>
-
-          <label for="nome">Nome Completo: <span aria-label="obrigatório">*</span></label>
-          <input type="text" id="nome" name="nome"
-                 placeholder="Seu nome completo"
-                 autocomplete="name"
-                 required minlength="3">
-
-          <label for="email">E-mail: <span aria-label="obrigatório">*</span></label>
-          <input type="email" id="email" name="email"
-                 placeholder="seu@email.com"
-                 autocomplete="email"
-                 required>
-
-          <label for="telefone">Telefone: <span aria-label="obrigatório">*</span></label>
-          <input type="tel" id="telefone" name="telefone"
-                 placeholder="(00) 00000-0000"
-                 autocomplete="tel"
-                 required>
-
-          <label for="mensagem">Mensagem: <span aria-label="obrigatório">*</span></label>
-          <textarea id="mensagem" name="mensagem"
-                    placeholder="Conte-nos sobre suas necessidades."
-                    required minlength="10"></textarea>
-
-          <button type="submit" class="formulario-btn-enviar">➥ Enviar</button>
-
-          <p>Ao enviar este formulário, você concorda com nossa
-            <a href="#" style="color: var(--cor-principal4);">Política de Privacidade</a>
-            e aceita receber comunicações do Zênite.
-          </p>
-        </form>
-      </section>
-    </article>
+    
 
     <!-- FAQ -->
     <section class="faq" aria-labelledby="faq-titulo">
