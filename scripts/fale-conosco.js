@@ -6,7 +6,9 @@ const faqCards = document.querySelectorAll('.faq .card');
 faqCards.forEach((card) => {
   const h3 = card.querySelector('h3');
   const p = card.querySelector('p');
+  
   if (!h3 || !p) return;
+
 
   // Torna acessível via teclado
   h3.setAttribute('tabindex', '0');
@@ -25,8 +27,12 @@ faqCards.forEach((card) => {
   h3.addEventListener('click', toggle);
   h3.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
+      // e.preventDefault();
       toggle();
     }
   });
+});
+document.querySelector('form').addEventListener('submit', (e) => {
+  e.preventDefault();
+  // lógica futura do back-end aqui
 });
