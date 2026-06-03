@@ -7,7 +7,7 @@
     <meta name="description" content="Zênite utiliza inteligência preditiva, dados climáticos e simulações urbanas para antecipar desastres e tornar cidades mais resilientes.">
     <meta property="og:title" content="Zênite">
     <meta property="og:description" content="Inteligência preditiva para cidades resilientes">
-    <meta property="og:image" content="../imagens/zenite-cidade.jpg">
+    <meta property="og:image" content="./conteudo/imagens/zenite-cidade.jpg">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://zenite.com.br/">
     <meta name="robots" content="index, follow">
@@ -17,105 +17,103 @@
     <!-- Fonte -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <!-- Estilos -->
-    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="./styles/styles.css">
     </head>
 <body>
   <header id="topo-pagina">
     
-    <video autoplay muted disablePictureInPicture src="../conteudo/videos/video-tempestade-c.mp4"></video>
+    <video autoplay playsinline muted src="./conteudo/videos/video-tempestade-c.mp4" poster="./conteudo/imagens/fundo-video.jpeg"></video>
     
     <h1 id="titulo">Zênite</h1>
     <nav id="menu" aria-label="Menu principal">
       <div class="links-menu">
-        <!-- <a class="linha-gradiente" href="./casos-reais.html">Ver casos reais</a> -->
         <a class="linha-gradiente" href="./faleconosco.html">Fale conosco</a>
         <a id="titulo-nav" class="linha-gradiente" href="#topo-pagina" aria-current="page">Zênite</a>
         <a class="linha-gradiente" href="./sobre-zenite.html">Sobre nós</a>
-        <!-- <a class="linha-gradiente " href="./faleconosco.html">Proteja-se de catastrofes</a> -->
       </div>
     </nav>
     
     <div class="cta-header">
       <p>Uma plataforma de monitoramento climático urbano</p>
       <p>Pronto para usar tecnologia para salvar vidas e reduzir danos?</p>
-      <span><a id="cta-transformar" href="./faleconosco.html">Falar com especialista</a></span>
-      <a href="#scrollar-para-problemas">Saiba mais</a>
+      <span><a class="cta-transformar" id="botao-header" href="./faleconosco.html">Falar com especialista</a></span>
+      <a id="link-saiba-mais" href="#como-funciona">Saiba mais</a>
     </div>
 
-    <img id="botao-rolar" loading="lazy" src="../conteudo/imagens/seta-baixo.png" alt="seta para baixo para rolar a pagina para baixo e saber mais sobre a zenite">
+    <a id="link-botao-rolar" href="#como-funciona"> <img id="botao-rolar" loading="lazy" src="./conteudo/imagens/seta-baixo.png" alt="seta para baixo para rolar a pagina para baixo e saber mais sobre a zenite" width="30px" height="50px"></a>
   </header>
 
   <main>
-    <article id="scrollar-para-problemas"  class="como-funciona">
+    <article id="como-funciona"  class="como-funciona">
       
       <div class="cabecalho">
-        <h2 class="linha-gradiente">Como o Zênite funciona</h2>
-          <p>Uma plataforma inteligente que prevê catástrofes e muito mais.</p>
+        <h2 class="linha-gradiente">Como funciona</h2>
+          <p>Uma plataforma inteligente que prevê catástrofes e muito mais</p>
       </div>
+      <div class="cards">
+        <section class="card">
 
-      <section class="card">
+          <img src="./conteudo/imagens/mapa-3d.png" loading="lazy" alt="Mapa 3D Interativo" width="200px" height="200px">
+          
+          <div class="texto-card">
+            <h3>Mapa 3D interativo</h3>
+              <p>Réplica digital da cidade com visualização detalhada de terreno e infraestrutura</p>
+          </div>
 
-        <img src="../conteudo/imagens/mapa-3d.png" alt="Mapa 3D Interativo">
+        </section>
         
-        <div class="texto-card">
-          <h3>Mapa 3D Interativo</h3>
-            <p>Réplica digital da cidade com visualização detalhada de terreno e infraestrutura</p>
+        <section class="card">
+
+          <img src="./conteudo/imagens/analise-camadas.png" loading="lazy" alt="Visualização de camadas climáticas urbanas" width="200px" height="200px">
+
+          <div class="texto-card">
+            <h3>Camadas de análise</h3>
+            <p>Fluxo de água, ilhas de calor, simulação de vento e previsão futura em timeline</p>
+          </div>
+
+        </section>
+        
+        <section id="ancora-como-funciona" class="card">
+
+          <img src="./conteudo/imagens/tecnologia-avancada.png" loading="lazy" alt="Ilustração de chip tecnologico" width="200px" height="200px">
+
+          <div class="texto-card">
+            <h3>Tecnologia avançada</h3>
+              <p>Integração com simulações climáticas globais em plataforma web acessível</p>
         </div>
 
-      </section>
-      
-      <section class="card">
-
-        <img src="../conteudo/imagens/analise-camadas.png" alt="Visualização de camadas climáticas urbanas">
-
-        <div class="texto-card">
-          <h3>Camadas de Análise</h3>
-          <p>Fluxo de água, ilhas de calor, simulação de vento e previsão futura em timeline</p>
-        </div>
-
-      </section>
-      
-      <section id="ancora-como-funciona" class="card">
-
-        <img src="../conteudo/imagens/tecnologia-avancada.png" alt="">
-
-        <div class="texto-card">
-          <h3>Tecnologia avançada</h3>
-            <p>Integração com simulações climáticas globais em plataforma web acessível</p>
+        </section>
       </div>
-
-      </section>
-
     </article>
 
     <section class="problemas-que-resolvemos">
       <div class="cabecalho">
-        <h2 class="linha-gradiente">Problemas que Resolvemos</h2>
+        <h2 class="linha-gradiente">Problemas que resolvemos</h2>
           <p>Transformando a gestão de desastres de reativa para preditiva</p>
       </div>
       <div class="cards">
 
         <div class="card">
           <h3 class="titulo-card">Previsões precisas</h3>
-            <p class="card-conteudo">Substituímos previsões climáticas genéricas por análises precisas de microclimas urbanos</p>
+            <p>Substituímos previsões climáticas genéricas por análises precisas de microclimas urbanos</p>
         </div>
 
         <div class="card">
           <h3 class="titulo-card">Atuação reativa</h3>
-            <p class="card-conteudo">Permitimos ação proativa da Defesa Civil com alertas antecipados por rua</p>
+            <p>Permitimos ação proativa da Defesa Civil com alertas antecipados por rua</p>
         </div>
 
         <div class="card">
           <h3 class="titulo-card">Urbanismo inteligente</h3>
-            <p class="card-conteudo">Integramos métricas ambientais no planejamento urbano e licenciamento</p>
+            <p>Integramos métricas ambientais no planejamento urbano e licenciamento</p>
         </div>
 
         <div class="card">
           <h3 class="titulo-card">Laudos eficientes</h3>
-            <p class="card-conteudo">Aceleramos licenciamentos com dados ambientais em tempo real</p>
+            <p>Aceleramos licenciamentos com dados ambientais em tempo real</p>
         </div>
 
       </div>
@@ -125,7 +123,7 @@
     <section class="compromisso">
       <div class="cabecalho">
         <h2 class="linha-gradiente">Compromisso</h2>
-          <p>ESG Ambiental Social e Governança</p>
+          <p>ESG ambiental, social e governança</p>
       </div>
 
         <section>
@@ -165,9 +163,9 @@
     <section class="pronto-para-transformar">
       <div>
         <h2>Pronto para transformar sua cidade?</h2>
-          <p>Solicite uma demonstração da plataforma Zênite e descubra como antecipar riscos ambentais urbanos.</p>
+          <p>Solicite uma demonstração da plataforma Zênite e descubra como antecipar riscos ambentais urbanos</p>
       </div>
-      <span><a class="cta-transformar" href="faleconosco.html">Fale com um especialista</a></span>
+      <span><a class="cta-transformar" href="faleconosco.html">Fale com especialista</a></span>
     </section>
 
   </main>
@@ -175,15 +173,14 @@
   <footer>
 
     <div class="logo">
-      <img class="logo-original" loading="lazy" src="../conteudo/imagens/nova-logo-zenite-cortada.png" alt="Logo Zênite">
+      <img class="logo-original" loading="lazy" src="./conteudo/imagens/nova-logo-zenite-cortada.png" alt="Logo Zênite" width="368px" height="390px" >
       <h2>Zênite - preditiva para cidades mais resilientes</h2>
     </div>
 
     
     
     <div class="footer-links">
-      <a href="./casos-reais.html">Casos Reais</a>
-      <a href="./comercializacao.html">Comercialização</a>
+      <a href="#topo-pagina">Inicio</a>
       <a href="./sobre-zenite.html">Sobre Zênite</a>
       <a href="./faleconosco.html">Fale Conosco</a>
     </div>
@@ -195,7 +192,7 @@
     
   </footer>
 
-  <script src="../scripts/script.js"></script>
+  <script src="./scripts/script.js"></script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
