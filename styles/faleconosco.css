@@ -424,13 +424,13 @@ iframe {
 
 /* Mensagem de erro formulario */
 .erro {
-  /* border: 2px solid #e53935 !important; */
+  border: 2px solid #e53935 !important; 
   color: var(--cor-neutra4);
   background-color: #e53935;
   text-align: center;
   padding: 10px;
   border-radius: 4px;
-}
+} 
 .sucesso{
   color: var(--cor-neutra4);
   background-color: #4caf50;
@@ -456,4 +456,42 @@ iframe {
 .error{
   border: 2px solid #e53935 !important;
 }
+
+.mensagem-status {
+    display: none; /* oculto por padrão */
+}
+
+.mensagem-status.ativo {
+    display: inline-block;
+}
+
+
+/* Estilização para o spinner */
+.spinner-envio {
+    display: none;
+}
+
+.spinner-envio.ativo {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    margin-inline:auto;
+    border: 3px solid var(--cor-principal2); /*cor fixa branca */
+    /* border-bottom-color: #FF3D00; */
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    vertical-align: middle  /*alinha com o botao*/
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+
 
