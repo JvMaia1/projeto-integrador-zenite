@@ -142,6 +142,11 @@ function validarNome() { // valida o nome informado
         mostrarErro(nome, "Informe um nome válido."); 
         return false; // indica validação falha
     }
+    //se o valor for algo que nao seja texto mostra erro 
+    if (!/^[a-zA-ZÀ-ÿ\s]+$/.test(valor)) { //  bloqueia números e caracteres especiais
+        mostrarErro(nome, "O nome deve conter apenas letras.");
+        return false;
+    }   
 
     limparErro(nome); // limpa erro anterior se houver
     return true; // indica validação bem-sucedida
@@ -197,7 +202,9 @@ function validarMensagem() { // valida a mensagem enviada
     limparErro(mensagem); // limpa erro anterior
     return true;// indica mensagem válida
 }
-
+    // =============================================
+    // VALIDAÇÕES EM TEMPO REAL
+    // =============================================
 nome.addEventListener("input", validarNome); // valida nome enquanto o usuário digita
 email.addEventListener("input", validarEmailCampo); // valida email enquanto o usuário digita
 telefone.addEventListener("input", validarTelefone);// valida telefone enquanto o usuário digita
@@ -257,11 +264,9 @@ form.addEventListener("submit", async (e) => { // adiciona evento ao enviar o fo
 
     } 
     finally {
-
         setTimeout(() => { // restaura o botão após 3 segundos
             botaoEnviar.disabled = false; // reabilita o botão
             ocultarStatus();
         }, 3000);
-
     }
 });

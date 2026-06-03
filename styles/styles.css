@@ -571,12 +571,15 @@ footer {
 }
 
 @media(min-width:768px){
-  .problemas-que-resolvemos{
+ 
+  .compromisso .cards{
+    flex-flow: row;
+  }
+}
+@media(min-width:992px){
+   .problemas-que-resolvemos{
     .cards{
       flex-flow: row;
     }
-  }
-  .compromisso .cards{
-    flex-flow: row;
   }
 }
