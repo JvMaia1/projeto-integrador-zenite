@@ -20,7 +20,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <!-- Estilos -->
+
+      <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
+    
     </head>
 <body>
   <header id="topo-pagina">
@@ -54,18 +58,18 @@
           <p>Uma plataforma inteligente que prevê catástrofes e muito mais</p>
       </div>
       <div class="cards">
-        <section class="card">
+        <section data-aos="zoom-in" class="card">
 
           <img src="./conteudo/imagens/mapa-3d.png" loading="lazy" alt="Mapa 3D Interativo" width="200px" height="200px">
           
-          <div class="texto-card">
+          <div  class="texto-card">
             <h3>Mapa 3D interativo</h3>
               <p>Réplica digital da cidade com visualização detalhada de terreno e infraestrutura</p>
           </div>
 
         </section>
         
-        <section class="card">
+        <section data-aos="zoom-in" class="card">
 
           <img src="./conteudo/imagens/analise-camadas.png" loading="lazy" alt="Visualização de camadas climáticas urbanas" width="200px" height="200px">
 
@@ -76,7 +80,7 @@
 
         </section>
         
-        <section id="ancora-como-funciona" class="card">
+        <section data-aos="zoom-in" id="ancora-como-funciona" class="card">
 
           <img src="./conteudo/imagens/tecnologia-avancada.png" loading="lazy" alt="Ilustração de chip tecnologico" width="200px" height="200px">
 
@@ -95,27 +99,32 @@
           <p>Transformando a gestão de desastres de reativa para preditiva</p>
       </div>
       <div class="cards">
+          <div data-aos="fade-right"data-aos-offset="300"data-aos-easing="ease-in-sine">
+            <div class="card" >
+              <h3 class="titulo-card">Previsões precisas</h3>
+                <p>Substituímos previsões climáticas genéricas por análises precisas de microclimas urbanos</p>
+            </div>
+          </div>
 
-        <div class="card">
-          <h3 class="titulo-card">Previsões precisas</h3>
-            <p>Substituímos previsões climáticas genéricas por análises precisas de microclimas urbanos</p>
-        </div>
+          <div data-aos="fade-right"data-aos-offset="400"data-aos-easing="ease-in-sine">
 
-        <div class="card">
-          <h3 class="titulo-card">Atuação reativa</h3>
-            <p>Permitimos ação proativa da Defesa Civil com alertas antecipados por rua</p>
-        </div>
-
-        <div class="card">
-          <h3 class="titulo-card">Urbanismo inteligente</h3>
-            <p>Integramos métricas ambientais no planejamento urbano e licenciamento</p>
-        </div>
-
-        <div class="card">
-          <h3 class="titulo-card">Laudos eficientes</h3>
-            <p>Aceleramos licenciamentos com dados ambientais em tempo real</p>
-        </div>
-
+            <div class="card" >
+              <h3 class="titulo-card">Atuação reativa</h3>
+                <p>Permitimos ação proativa da Defesa Civil com alertas antecipados por rua</p>
+            </div>
+          </div>
+          <div data-aos="fade-right"data-aos-offset="500"data-aos-easing="ease-in-sine">
+            <div class="card" >
+              <h3 class="titulo-card">Urbanismo inteligente</h3>
+                <p>Integramos métricas ambientais no planejamento urbano e licenciamento</p>
+            </div>
+          </div>
+          <div data-aos="fade-right"data-aos-offset="600"data-aos-easing="ease-in-sine">
+            <div class="card" >
+              <h3 class="titulo-card">Laudos eficientes</h3>
+                <p>Aceleramos licenciamentos com dados ambientais em tempo real</p>
+            </div>
+          </div>
       </div>
 
     </section>
@@ -129,33 +138,33 @@
         <section>
           <div class="cards">
 
-            <div class="card">
-          <h3>Ambiental</h3>
-            <ul>
-              <li>Adaptação às mudanças climáticas</li>
-              <li>Infraestrutura sustentável</li>
-              <li>Green IT</li>
-            </ul>
-        </div>
-        
-        <div class="card">
-          <h3>Social</h3>
-            <ul>
-              <li>Proteção de comunidades vulneráveis</li>
-              <li>Democratização de dados climáticos</li>
-              <li>Justiça climática</li>
-            </ul>
-        </div>
+              <div data-aos="fade-up" data-aos-duration="1000" class="card" >
+                <h3>Ambiental</h3>
+                  <ul>
+                    <li>Adaptação às mudanças climáticas</li>
+                    <li>Infraestrutura sustentável</li>
+                    <li>Green IT</li>
+                  </ul>
+              </div>
+            
+              <div data-aos="fade-up" data-aos-duration="2000" class="card">
+                <h3>Social</h3>
+                  <ul>
+                    <li>Proteção de comunidades vulneráveis</li>
+                    <li>Democratização de dados climáticos</li>
+                    <li>Justiça climática</li>
+                  </ul>
+              </div>
 
-        <div class="card">
-            <h3>Governança</h3>
-            <ul>
-              <li>Transparência de dados</li>
-              <li>Conformidade LGPD</li>
-            <li>Combate ao greenwashing</li>
-          </ul>
-        </div>
-        </div>
+            <div data-aos="fade-up" data-aos-duration="3000" class="card">
+                <h3>Governança</h3>
+                <ul>
+                  <li>Transparência de dados</li>
+                  <li>Conformidade LGPD</li>
+                <li>Combate ao greenwashing</li>
+              </ul>
+            </div>
+          </div>
         </section>
 
     </section>
@@ -185,14 +194,26 @@
       <a href="./faleconosco.html">Fale Conosco</a>
     </div>
 
-    <div class="footer-contato">
+    <address class="footer-contato">
       <p>Email: <a href="mailto:contato@zenite.com.br">contato@zenite.com.br</a></p>
       <p>Telefone: <a href="tel:+551112345678">(11) 1234-5678</a></p>
-    </div>
-    
+    </address>
+    <p class="footer-copy">&copy; 2026 Zênite. Todos os direitos reservados.</p>
   </footer>
 
+<<<<<<< HEAD
+  <script src="/scripts/script.js"></script>
+  <!-- JS da AOS Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once:true,
+    });
+  </script>
+
+=======
   <script src="./scripts/script.js"></script>
+>>>>>>> origin/site-publicavel
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
