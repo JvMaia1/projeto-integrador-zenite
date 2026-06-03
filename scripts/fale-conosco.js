@@ -205,10 +205,10 @@ function validarMensagem() { // valida a mensagem enviada
     // =============================================
     // VALIDAÇÕES EM TEMPO REAL
     // =============================================
-nome.addEventListener("input", validarNome); // valida nome enquanto o usuário digita
-email.addEventListener("input", validarEmailCampo); // valida email enquanto o usuário digita
-telefone.addEventListener("input", validarTelefone);// valida telefone enquanto o usuário digita
-mensagem.addEventListener("input", validarMensagem);// valida mensagem enquanto o usuário digita
+nome.addEventListener("blur", validarNome); // valida nome enquanto o usuário digita
+email.addEventListener("blur", validarEmailCampo); // valida email enquanto o usuário digita
+telefone.addEventListener("blur", validarTelefone);// valida telefone enquanto o usuário digita
+mensagem.addEventListener("blur", validarMensagem);// valida mensagem enquanto o usuário digita
 
     // =============================================
     // SUBMIT
