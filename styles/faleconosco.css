@@ -420,9 +420,30 @@ iframe {
   }
  
 }
+
+
 /* Mensagem de erro formulario */
 .erro {
-    border: 2px solid #e53935 !important;
+  /* border: 2px solid #e53935 !important; */
+  color: var(--cor-neutra4);
+  background-color: #e53935;
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+}
+.sucesso{
+  color: var(--cor-neutra4);
+  background-color: #4caf50;
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+}
+.enviando{
+  color: var(--cor-neutra4);
+  background-color: var(--text-light);
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
 }
 
 .mensagem-erro {
@@ -430,5 +451,9 @@ iframe {
     margin-top: 4px;
     color: #e53935;
     font-size: 0.875rem;
+}
+/* erro valido para os inputs */
+.error{
+  border: 2px solid #e53935 !important;
 }
 
