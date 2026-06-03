@@ -1,17 +1,17 @@
 :root {
   /* ─── Cores principais ─── */
-  --cor-principal1: #0B1F3A;
-  --cor-principal2: #2563EB;
-  --cor-principal3: #3882F6;
-  --cor-principal4: #7C3AED;
-  --cor-principal5: #F8FAFC;
+  --cor-azul-escuro: #0B1F3A;
+  --cor-azul-destaque: #2563EB;
+  --cor-azul-claro: #3882F6;
+  --cor-roxo: #7C3AED;
+  --cor-branco-titulos: #F8FAFC;
 
   /* ─── Cores Neutras ─── */
-  --cor-neutra1: #020617;
-  --cor-neutra2: #1E293B;
-  --cor-neutra3: #64748B;
-  --cor-neutra4: #E2E8F0;
-  --cor-neutra5: #FFFFFF;
+  --cor-azul-muito-escuro: #020617;
+  --cor-azul-opaco: #1E293B;
+  --cor-lilas-pastel: #64748B;
+  --cor-azul-acizentado: #E2E8F0;
+  --cor-branco: #FFFFFF;
   --light: #E2EBF0;
 
   /* ─── Textuais ─── */
@@ -71,7 +71,7 @@ body{
 }
 /*estilização de marcação do menu para o usario saber onde esta navegando*/
 .links-menu a[aria-current="page"] {
-    color: var(--cor-principal3);
+    color: var(--cor-azul-claro);
     font-weight: 600;
 }
 
@@ -83,7 +83,7 @@ body{
   margin: 0;
   text-shadow: 0 0 20px black;
   padding: 5rem 2rem;
-  color: var(--cor-principal5);
+  color: var(--cor-branco-titulos);
 }
 
 .cta-header-fale-conosco h1 {
@@ -95,20 +95,20 @@ body{
 /* ─── CONTATOS ─── */
 .contatos {
   height: fit-content;
-  /* padding: 2rem 1rem; */
-  background-color: var(--cor-principal5);
+  /* padding-block-start: 5rem; */
+  background-color: var(--cor-branco-titulos);
 }
 
 .contatos h2 {
   font-size: clamp(1.5rem, 3vw, 2.5rem);
-  color: var(--cor-principal5);
+  color: var(--cor-branco-titulos);
   text-align: center;
   padding-block-end: 1.5rem;
 }
 
 .contatos .card a {
   text-decoration: none;
-  color: var(--cor-principal2);
+  color: var(--cor-azul-destaque);
   transition: color var(--transition);
   font-size: clamp(0.75rem, 1.5vw, 5rem);
   /* display: flex; */
@@ -119,7 +119,7 @@ body{
 
 .contatos a:hover,
 .contatos a:focus-visible {
-  color: var(--cor-principal3);
+  color: var(--cor-azul-claro);
   text-decoration: underline;
 }
 
@@ -135,14 +135,14 @@ body{
 .contatos .card {
   /* justify-content: center; */
   flex: 1 1 240px;
-  /* background-color: var(--cor-principal5); */
+  /* background-color: var(--cor-branco-titulos); */
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1.5rem 1rem;
   border-radius: var(--radius-md);
-  color: var(--cor-neutra1);
+  color: var(--cor-azul-muito-escuro);
   gap: 0.5rem;
   transition: transform var(--transition), box-shadow var(--transition);
   margin-block-end: 15px;
@@ -158,13 +158,13 @@ body{
 #cta-formulario {
   margin-inline: 1rem;
   padding-block: 1.5rem;
-  color: var(--cor-neutra4);
+  color: var(--cor-azul-acizentado);
   text-align: center;
   font-size: 1rem;
 }
 
 #cta-formulario a {
-  color: var(--cor-principal3);
+  color: var(--cor-azul-claro);
   text-decoration: underline;
 }
 
@@ -174,7 +174,7 @@ body{
   height: fit-content;
   display: flex;
   justify-content: center;
-  background-color: var(--cor-principal5);
+  background-color: var(--cor-branco-titulos);
   padding: 20px; 
   
 }
@@ -204,14 +204,14 @@ form {
 label {
   font-size:clamp(0.9rem,1.1vw,5rem);
   font-weight: 600;
-  color: var(--cor-principal4);
+  color: var(--cor-roxo);
   margin-block-start: 0.6rem;
 }
 
 input,
 textarea,
 select {
-  border: 1.5px solid var(--cor-neutra4);
+  border: 1.5px solid var(--cor-azul-acizentado);
   padding: 0.6rem 0.8rem;
   border-radius: var(--radius-sm);
   font-size: 0.95rem;
@@ -225,7 +225,7 @@ input:focus,
 textarea:focus,
 select:focus {
   outline: none;
-  border-color: var(--cor-principal2);
+  border-color: var(--cor-azul-destaque);
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
@@ -238,7 +238,7 @@ select:focus {
 textarea {
   min-height: 7rem;
   resize: vertical;
-  color: var(--cor-neutra3);
+  color: var(--cor-lilas-pastel);
 }
 
 .formulario-btn-enviar {
@@ -246,8 +246,8 @@ textarea {
   padding: 0.75rem;
   border: none;
   border-radius: var(--radius-sm);
-  background-color: var(--cor-principal2);
-  color: var(--cor-neutra5);
+  background-color: var(--cor-azul-destaque);
+  color: var(--cor-branco);
   font-size: 1rem;
   font-weight: 600;
   font-family: var(--fonte-titulos);
@@ -274,12 +274,12 @@ form > p:last-child {
 
 /* ─── FAQ ─── */
 .faq {
-  background-color: var(--cor-neutra2);
+  background-color: var(--cor-azul-opaco);
   padding: 2rem 1rem;
 }
 
 .faq h2 {
-  color: var(--cor-principal5);
+  color: var(--cor-branco-titulos);
   font-size: clamp(1.5rem, 3vw, 2.5rem);
   text-align: center;
   margin-block-end: 1.5rem;
@@ -300,10 +300,10 @@ form > p:last-child {
 }
 
 .faq .card {
-  background-color: var(--cor-neutra1);
+  background-color: var(--cor-azul-muito-escuro);
   border-radius: var(--radius-md);
   padding: 1.25rem 1.5rem;
-  color: var(--cor-neutra5);
+  color: var(--cor-branco);
   cursor: pointer;
   transition: background-color var(--transition);
   flex-direction: column;
@@ -333,7 +333,7 @@ form > p:last-child {
 .faq .card p {
   margin-block-start: 0.75rem;
   font-size: 0.9rem;
-  color: var(--cor-neutra4);
+  color: var(--cor-azul-acizentado);
   line-height: 1.6;
 }
 

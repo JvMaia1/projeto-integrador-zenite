@@ -2,7 +2,7 @@
 
     --primary: #2563EB;
     --primary-dark: #1D4ED8;
-    --cor-principal5: #F8FAFC;
+    --cor-branco-titulos: #F8FAFC;
 
     --dark: #020617;
     --light: #E2EBF0;
@@ -39,7 +39,7 @@ html {
 
 body {
     background: #ffffff;
-    color: #111827;
+    color: #ffffff;
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -48,6 +48,9 @@ img {
     width: 100%;
     display: block;
 }
+
+p{ font-size: clamp(1.2rem, calc((1.4vw + 1.4vh) / 2), 3rem);}
+h3{ font-size: clamp(1rem, calc((1.5vw + 1.6vh) / 2), 3rem);}
 
 .container {
     width: min(1200px, 92%);
@@ -174,16 +177,16 @@ img {
 
 h1{
     position: initial;
-    color: var(--cor-principal5);
+    color: var(--cor-branco-titulos);
     font-size: clamp(1.5rem, 6vw, 4rem);
     line-height: 1.1;
     text-shadow: 0 0 10px black;
     margin-block: 24px;
 }
+
 .hero-content p{
     text-shadow: 0 0 10px black;
     color: rgba(255,255,255,.75);
-    font-size: 1.1rem;
     margin-block-end: 32px;
 }
 
@@ -201,7 +204,7 @@ h1{
     display: block;
     margin-block-end: 10px;
 }
-
+s
 
 /* =========================================
 OBJETIVOS
@@ -209,8 +212,14 @@ OBJETIVOS
 .primeira-visao{background-color: var(--light);}
 
 .nossos-objetivos{
+    background-color: var(--cor-branco-titulos);
+    display: flex;
+    flex-direction: column;
     padding: 20px 0;
-    /* padding-block: 20px; */
+    align-items: center;
+    gap: 3rem;
+    color: black;
+    padding-block-end: 10vh;
 }
 
 .objetivos{
@@ -368,9 +377,11 @@ VALOR ESTRATÉGICO
 .valor-estrategico{
     background: var(--light);
     padding: 20px 0;
+    padding-block: 5vh;
 }
 
 .valor-lista{
+    color: black;
     display: flex;
     flex-direction: column;
 }
@@ -381,6 +392,10 @@ VALOR ESTRATÉGICO
 }
 
 .valor-lista{
+    p{
+        padding-block-end: 1rem;
+    }
+    font-size: clamp(1rem, calc((1.2vw + 1.2vh) / 2), 6rem);
     summary{
         display: inline list-item;
         padding-block: 0.5rem;
@@ -400,7 +415,7 @@ VALOR ESTRATÉGICO
 }
 
 .links-menu a[aria-current="page"] {
-    color: var(--cor-principal3);
+    color: var(--cor-azul-claro);
     font-weight: 600;
 }
 
@@ -482,16 +497,16 @@ header{
     .tech-card{
         flex-basis: 30%;
     }
+    .objetivos{
+        width: 90vw;
+        flex-wrap: nowrap;
+        /* gap: 0%; */
+    }
     .objetivo-card{
-        max-width: 240px;
+        max-width: 340px;
         padding-inline: 20px;
     }
 }
-
-.primeira-visao{
-    min-height: 100vh;
-}
-
 
 
 

@@ -124,7 +124,7 @@ p{ text-align: start; }
   z-index: 5;
   
   a{
-    font-size: clamp(1rem, 1.2vw, 60px);
+    font-size: clamp(1rem, calc((2vw + 2vh)/2), 60px);
     position: relative;
     transition: 0.3s ease-in-out;
     
@@ -177,19 +177,20 @@ p{ text-align: start; }
   min-height: fit-content;
   height: 6vh;
 }
+ul{list-style: none;}
 
 .cta-header{
   position: absolute;
   top: 50vh;
   text-align: center;
-  font-size: clamp(1rem, 3vw, 8rem);
+  font-size: clamp(1rem, calc((3vw + 3vh)/2), 8rem);
   color: var(--cor-azul-acizentado);
   text-shadow: 0 0 10px black;
   p{
     text-align: center;
     user-select: none;
     position: relative;
-    font-size: clamp(1rem, 1.6vw, 8rem);
+    font-size: clamp(1rem, calc((1.6vw + 1.6vh)/2), 8rem);
     margin-inline: 10px;
     margin-block: 1rem;
   }
@@ -201,12 +202,11 @@ p{ text-align: start; }
     display: inline-block;
     position: relative;
     color: var(--cor-branco);
-    font-size: clamp(1rem, 1.8vw, 6rem);
+    font-size: clamp(1rem, calc((1.8vw + 1.8vh) / 2), 6rem);
     text-decoration: none;
     background-color: var(--cor-azul-opaco);
     border-radius: 10px;
     padding: 5px 10px;
-    /* box-shadow: 0 0 10px black; */
     text-shadow: none;
     margin: 5px;
     border: 1px solid #b1bcd380;
@@ -215,12 +215,14 @@ p{ text-align: start; }
   a:hover, a:focus-visible{ 
     background-color:var(--cor-azul-claro); 
     box-shadow: 0 0 2px var(--cor-azul-destaque);
-    /* text-shadow: 0 0 5px black; */
   }     
+  p{
+    font-size: clamp(1rem, calc((1.3vw + 1.3vh) / 2), 6rem);
+  }
 }
 
 #link-saiba-mais{
-  background-color: #1E293B;
+  background-color: #3b3c3d;
   &:hover, &:focus-visible{ 
     background-color:var(--cor-azul-escuro); 
   }     
@@ -230,7 +232,7 @@ p{ text-align: start; }
   /* centraliação responsiva  */
   left: 0;
   right: 0;
-  width: clamp(40px, 12vw, 60px);
+  width: clamp(40px, calc((12vw + 12vh)/2), 60px);
   margin: 0 auto;
   
   /* Posição */
@@ -258,6 +260,7 @@ p{ text-align: start; }
   height: 70vh;
   ul{
     margin-inline-start: 1rem ;
+    li{font-size: clamp(1rem, calc((1.5vw + 1.5vh) / 2), 4rem);}
   }
 }
 
@@ -275,7 +278,6 @@ p{ text-align: start; }
   .card{
     flex: 1 1 30%;
     flex-direction: column;
-    padding: 3rem;
     
     h3,p{text-align: center;}
   }
@@ -286,7 +288,7 @@ p{ text-align: start; }
   isolation: isolate;
   position: relative;
   flex-direction: column;
-  font-size: clamp(0.8rem, 2vw, 3rem);
+  font-size: clamp(1rem, calc((2vw + 2vh)/2), 3rem);
   min-height: fit-content;
   align-items: center;
   justify-content: space-around;
@@ -303,7 +305,7 @@ p{ text-align: start; }
 
 .como-funciona, .problemas-que-resolvemos, .compromisso{
   p{
-    font-size: clamp(0.8rem, 1.5vw, 4rem);
+    font-size: clamp(1rem, calc((1.5vw + 1.5vh) / 2), 4rem);
     margin: 0 auto;
     margin-block-end: 15px;
   }
@@ -328,15 +330,14 @@ p{ text-align: start; }
   
   h2, h3{
     width: 100%;
-    /* text-align: center; */
-    font-size: clamp(1rem, 1.2vw, 3rem);
+    font-size: clamp(1rem, calc((1.4vw + 1.4vh) / 2), 3rem);
   }
   
   ul{
     margin-inline-start: 5%;
   }
   
-  p, li{ font-size: clamp(1rem, 1vw, 6rem); }
+  p, li{ font-size: clamp(1rem, calc((1vw+1vh)/2), 6rem); }
 }
 
 .problemas-que-resolvemos{
@@ -354,7 +355,6 @@ p{ text-align: start; }
   .card{
     color: var(--cor-azul-muito-escuro);
     text-shadow: none;
-    padding: 3rem;
   }
   
 }
@@ -365,6 +365,7 @@ p{ text-align: start; }
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  max-width: 90%;
   h2{
       font-size: clamp(1.5rem, 3vw, 8rem);
       font-family: var(--fonte-titulos);
@@ -408,6 +409,7 @@ p{ text-align: start; }
     h3{text-align: center;}
     ul{
       li{
+        list-style: disc;
         padding: 5px;
       }
     }
@@ -451,6 +453,14 @@ p{ text-align: start; }
   }
 }
 
+.cards{
+  align-items: center;
+  .card{
+    width: 90%;
+    p{margin-inline-start: 0;}
+  }
+}
+
 .compromisso .card:last-child{
   position: relative;
   overflow: hidden;
@@ -465,7 +475,6 @@ p{ text-align: start; }
     background-image: url(../conteudo/imagens/aperto-de-mao-empresarial-c2.jpg);
     background-size: cover;
     background-position: center top;
-    /* background-repeat: no-repeat; */
     
     opacity: 0.2; /* controla transparência da imagem */
   }
@@ -490,7 +499,6 @@ p{ text-align: start; }
 
 footer {
   color: white;
-  font-size: clamp(0.8rem, 0.8vw, 3rem);
   text-align: center;
   display: flex;
   z-index: 6;
@@ -499,6 +507,10 @@ footer {
   align-items: center;
   height: fit-content;
   background-color: var(--cor-azul-escuro);
+  p{
+    font-size: clamp(1rem, calc((1vw + 1vh) / 2), 3rem);
+    padding: 10px;
+  }
   a{
     color: white;
     text-decoration:underline;
@@ -509,8 +521,11 @@ footer {
 }
 
 .footer-links {
-  display: flex;
-  gap: 0.5rem;
+  ul{
+    display: flex;
+    gap: 0.5rem;
+    list-style: none;
+  }
 }
 
 .footer-contato{
@@ -526,12 +541,13 @@ footer {
   align-items: center;
   .logo-original {
     width: clamp(50px, 3.5vw, 150px);
+    height: auto;
     margin: 0.3rem ;
     padding: 10px;
   }
 }
 
-@media(min-width:768px){
+@media(min-width:1400px){
   .problemas-que-resolvemos{
     .cards{
       flex-flow: row;
@@ -543,6 +559,12 @@ footer {
   .como-funciona .card{
     flex-direction: row;
     h3,p{text-align: start;}
+  }
+  .card{padding: 2rem;}
+  .footer-links{
+    ul{
+      gap: 5rem;
+    }
   }
 }
 
