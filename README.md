@@ -55,6 +55,7 @@ O site foi pensado para oferecer uma apresentação institucional clara, transmi
 Projeto acadêmico concluído como parte do Projeto Integrador do SENAC.
 
 /////////////////////////////////////////////////////////////////////
+
 Sitemap: https://wireframe.cc/X5MNMM
 
 Wireframe:  
