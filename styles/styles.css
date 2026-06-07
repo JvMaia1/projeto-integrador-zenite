@@ -528,12 +528,12 @@ footer {
   }
 }
 
-.footer-contato{
+/* .footer-contato{
   display: flex;
   text-align: start;
   padding: 10px;
   p{padding: 5px;}
-}
+} */
 
 .logo{
   display: flex;
@@ -567,6 +567,14 @@ footer {
     }
   }
 }
+
+/* footer address{
+  background-color: var(--cor-azul-opaco);
+  border-radius: 5px;
+  box-shadow: 0 0 5px black;
+  margin: 5px;
+
+} */
 
 @keyframes sobe_desce{
   from{transform: translateY(10px);}

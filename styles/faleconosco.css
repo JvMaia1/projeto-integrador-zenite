@@ -356,10 +356,11 @@ iframe {
   .cta-header-fale-conosco {
     padding: 3rem 1rem;
   }
+  
 }
-.footer-links{
+/* .footer-links{
   position: none!important;
-}
+} */
 
 @media(min-width:768px){ 
  .contatos .cards {
