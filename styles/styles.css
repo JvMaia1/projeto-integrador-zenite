@@ -202,7 +202,7 @@ ul{list-style: none;}
     display: inline-block;
     position: relative;
     color: var(--cor-branco);
-    font-size: clamp(1rem, calc((1.8vw + 1.8vh) / 2), 6rem);
+    font-size: clamp(1.5rem, calc((2.2vw + 2.2vh) / 2), 6rem);
     text-decoration: none;
     background-color: var(--cor-azul-opaco);
     border-radius: 10px;
@@ -341,11 +341,9 @@ ul{list-style: none;}
 }
 
 .problemas-que-resolvemos{
-  color: var(--cor-branco-titulos);
   background-color: #e4e7eb;
   color: var(--cor-azul-muito-escuro);
   padding-block: 6rem;
-  /* margin-block: 3rem; */
   min-height: fit-content;
   display: flex;
   flex-wrap: wrap;
@@ -375,19 +373,18 @@ ul{list-style: none;}
 
 .problemas-que-resolvemos .cards{
   display: flex;
-  width: 90vw;
   flex-wrap: wrap;
   padding: 2rem;
   gap: 1rem;
   flex-direction: column;
-  justify-content: space-around;
+  align-content: center;
+  
+  .card{ 
+    border-inline-end: solid 5px var(--cor-azul-destaque);
+    flex-direction: column;
+  }
 }
-
-.problemas-que-resolvemos .card{ 
-  border-inline-end: solid 5px var(--cor-azul-destaque);
-  flex-direction: column;
-}
-
+  
 .compromisso {
   .cards{
     display: flex;
@@ -521,30 +518,26 @@ footer {
 }
 
 .footer-links {
+  padding-block: 10px;
   ul{
     display: flex;
-    gap: 0.5rem;
     list-style: none;
+    gap: 2rem;
   }
 }
 
-/* .footer-contato{
-  display: flex;
-  text-align: start;
-  padding: 10px;
-  p{padding: 5px;}
-} */
-
 .logo{
+  padding-block: 10px;
   display: flex;
   font-family: var(--fonte-titulos);
   align-items: center;
   .logo-original {
-    width: clamp(50px, 3.5vw, 150px);
+    width: clamp(80px, calc((5.5vw + 5.5vh) / 2), 200px);
     height: auto;
     margin: 0.3rem ;
     padding: 10px;
   }
+  h2{font-size: clamp(1.2rem, calc((2vw + 2vh) / 2), 4rem);}
 }
 
 @media(min-width:1400px){
@@ -567,14 +560,6 @@ footer {
     }
   }
 }
-
-/* footer address{
-  background-color: var(--cor-azul-opaco);
-  border-radius: 5px;
-  box-shadow: 0 0 5px black;
-  margin: 5px;
-
-} */
 
 @keyframes sobe_desce{
   from{transform: translateY(10px);}
