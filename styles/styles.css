@@ -190,7 +190,7 @@ ul{list-style: none;}
     text-align: center;
     user-select: none;
     position: relative;
-    font-size: clamp(1rem, calc((1.6vw + 1.6vh)/2), 8rem);
+    font-size: clamp(1.5rem, calc((2vw + 2vh)/2), 8rem);
     margin-inline: 10px;
     margin-block: 1rem;
   }
@@ -215,10 +215,12 @@ ul{list-style: none;}
   a:hover, a:focus-visible{ 
     background-color:var(--cor-azul-claro); 
     box-shadow: 0 0 2px var(--cor-azul-destaque);
-  }     
-  p{
-    font-size: clamp(1rem, calc((1.3vw + 1.3vh) / 2), 6rem);
-  }
+  }  
+  
+}
+
+.pronto-para-transformar{
+  p{ font-size: clamp(1rem, calc((1.3vw + 1.3vh) / 2), 6rem); }
 }
 
 #link-saiba-mais{
@@ -249,8 +251,8 @@ ul{list-style: none;}
   animation-direction: alternate;
   
   /* Estilização */
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 1px gray solid;
+  background-color: hsla(0, 0%, 0%, 0.685);
+  border: 1px rgb(33, 81, 95) solid;
   padding: 10px;
   border-radius: 100%;
   user-select: none;
@@ -343,6 +345,7 @@ ul{list-style: none;}
 }
 
 .problemas-que-resolvemos{
+  padding-block: 3rem;
   background-color: #e4e7eb;
   color: var(--cor-azul-muito-escuro);
   min-height: fit-content;
@@ -352,8 +355,12 @@ ul{list-style: none;}
   align-items: center;
   flex-direction: column;
   .card{
+    padding-block: 3rem;
     color: var(--cor-azul-muito-escuro);
     text-shadow: none;
+  }
+  .cabecalho{
+    padding: 3rem;
   }
   
 }
