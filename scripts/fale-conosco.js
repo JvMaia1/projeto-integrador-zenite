@@ -185,6 +185,10 @@ function validarMensagem() {
     return true;
 }
 
+function ocultarTeclado(){
+    [nome,telefone,email,mensagem].forEach(campo =>{campo.blur();})
+};
+
 /* ------------------- VALIDAÇÃO EM TEMPO REAL ------------------- */
 nome.addEventListener("blur", validarNome);
 email.addEventListener("blur", validarEmailCampo);
@@ -211,6 +215,8 @@ form.addEventListener("submit", async (e) => {
 
     mostrarStatus("enviando");
     botaoEnviar.disabled = true;
+
+    ocultarTeclado();
 
     try {
         await emailjs.sendForm("service_p0giqqh", "template_ffrup4a", form);

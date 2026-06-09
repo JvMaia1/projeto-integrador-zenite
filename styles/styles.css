@@ -237,7 +237,7 @@ ul{list-style: none;}
   
   /* Posição */
   position: fixed;
-  top: 90vh;
+  top: 90dvh;
   transform: translate(-50%, -50%);
   z-index: 3;
   
@@ -249,7 +249,7 @@ ul{list-style: none;}
   animation-direction: alternate;
   
   /* Estilização */
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.5);
   border: 1px gray solid;
   padding: 10px;
   border-radius: 100%;
@@ -269,6 +269,8 @@ ul{list-style: none;}
   flex-direction: column;
   max-width: 100%;
   padding-block-start: 1rem;
+
+  h2{padding-block-start: 5dvh;}
 
   .cards{
     display: flex;
@@ -343,7 +345,6 @@ ul{list-style: none;}
 .problemas-que-resolvemos{
   background-color: #e4e7eb;
   color: var(--cor-azul-muito-escuro);
-  padding-block: 6rem;
   min-height: fit-content;
   display: flex;
   flex-wrap: wrap;
@@ -365,6 +366,7 @@ ul{list-style: none;}
   align-content: center;
   max-width: 90%;
   h2{
+      padding-block-start: 6dvh;
       font-size: clamp(1.5rem, 3vw, 8rem);
       font-family: var(--fonte-titulos);
   }

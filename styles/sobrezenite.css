@@ -385,8 +385,9 @@ VALOR ESTRATÉGICO
     display: flex;
     flex-direction: column;
 }
+
 .valor-lista ul {
-    list-style: disc; /* Re-enables standard bullets */
+    list-style-type: '➕ '; /* Re-enables standard bullets */
     margin-inline-start: 2rem;
     cursor: default;
 }
@@ -398,12 +399,35 @@ VALOR ESTRATÉGICO
     font-size: clamp(1rem, calc((1.2vw + 1.2vh) / 2), 6rem);
     summary{
         display: inline list-item;
+        list-style: none;
         padding-block: 0.5rem;
         cursor: pointer;
         &:hover{
             text-shadow: 0 0 1px black;
         }
+
+        &::before{
+            content:'➕ ' ;
+            display: inline-block;
+            animation: pulse 2s infinite alternate;
+        }
     }
+
+    li{
+        list-style: circle;
+        margin: 5px;
+        background-color: rgba(0, 0, 0, 0.05);
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    details{
+        background-color:hsla(223, 9%, 53%, 0.185);
+        padding: 5px;
+        border-radius: 5px;
+        margin-block: 10px;
+    }
+
 }
 
 .valor-lista div{
@@ -508,7 +532,17 @@ header{
     }
 }
 
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+    }
 
+    70% {
+        transform: scale(1.1);
+    }
 
-
+    100% {
+        transform: scale(0.95);
+    }
+}
 
