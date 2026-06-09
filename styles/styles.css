@@ -181,7 +181,7 @@ ul{list-style: none;}
 
 .cta-header{
   position: absolute;
-  top: 50vh;
+  top: 50dvh;
   text-align: center;
   font-size: clamp(1rem, calc((3vw + 3vh)/2), 8rem);
   color: var(--cor-azul-acizentado);
@@ -584,3 +584,59 @@ footer {
   from{opacity: 1;}
   to{opacity:0.7;}
 }
+
+/* Botão flutuante do WhatsApp */
+.botao-whatsapp {
+  position: fixed;
+  right: clamp(12px, 2vw, 24px);
+  bottom: clamp(12px, 2vw, 24px);
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  background-color: #25D366;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.botao-whatsapp svg {
+  width: 1.4rem;
+  height: 1.4rem;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.botao-whatsapp:hover,
+.botao-whatsapp:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  .botao-whatsapp {
+    padding: 0.75rem;
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .botao-whatsapp span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+}
+
