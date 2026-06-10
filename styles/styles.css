@@ -17,7 +17,7 @@
   --fonte-titulos: 'Poppins', sans-serif, system-ui;
 
   /* Gradiente */
-  --gradiente: linear-gradient(to right, #0B1F3A, #2563EB, #7C3AED);
+  --gradiente: linear-gradient(to right, #7C3AED, #2563EB, #7C3AED);
 }
 
 *, *::before, *::after {
