@@ -21,6 +21,8 @@
     --shadow-md: 0 12px 30px rgba(0,0,0,.12);
 
     --transition: .3s ease;
+    /* Gradiente */
+    --gradiente: linear-gradient(to right, #7C3AED, #2563EB, #7C3AED);
 }
 
 /* =========================================
