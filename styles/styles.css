@@ -58,7 +58,7 @@ p{ text-align: start; }
 
   video {
     position: absolute;
-    z-index: -2;  
+    /* z-index: -2;   */
     width: 100vw;
     height: 100vh;
     object-fit: cover;
