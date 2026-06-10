@@ -28,8 +28,8 @@
   /* ─── Fontes ─── */
   --fonte-titulos: 'Poppins', sans-serif, system-ui;
 
-  /* ─── Gradientes ─── */
-  --gradiente: linear-gradient(to right, #0B1F3A, #2563EB, #7C3AED);
+  /* Gradiente */
+  --gradiente: linear-gradient(to right, #7C3AED, #2563EB, #7C3AED);
 
   /* ─── Espaçamentos / bordas ─── */
   --radius-sm: 8px;
